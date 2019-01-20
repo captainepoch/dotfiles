@@ -1,0 +1,12 @@
+azaugg.vscode-python-docstring
+batisteo.vscode-django
+donjayamanne.jupyter
+donjayamanne.python-extension-pack
+esbenp.prettier-vscode
+magicstack.MagicPython
+ms-python.python
+ms-vscode.cpptools
+stkb.rewrap
+tht13.python
+VisualStudioExptTeam.vscodeintellicode
+wholroyd.jinja

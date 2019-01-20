@@ -1,0 +1,17 @@
+# Emacs
+!emacs
+emacs/*
+!emacs/snippets
+!emacs/config
+!emacs/init.el
+!emacs/mutt.el
+!emacs/custom.el
+!emacs/ido.last
+
+# VSCodium
+!vscodium
+vscodium/*
+!vscodium/extensions.sh
+!vscodium/extensions.txt
+!vscodium/settings.json
+!vscodium/settings_mac.json

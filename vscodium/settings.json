@@ -1,0 +1,29 @@
+{
+  // Editor
+  "editor.fontFamily": "'Liberation Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontSize": 13,
+  "editor.rulers": [80, 100],
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": false,
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "rewrap.autoWrap.enabled": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "prettier.disableLanguages": ["markdown"],
+  // Python
+  "python.jediEnabled": false,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.pep8Enabled": true,
+  "python.formatting.provider": "autopep8",
+  "python.linting.lintOnSave": true,
+  "python.venvPath": "~/Projects/PyVenv",
+  // Other
+  "telemetry.enableTelemetry": false,
+  "breadcrumbs.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "none"
+}
