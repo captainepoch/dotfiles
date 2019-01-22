@@ -22,5 +22,6 @@
   "telemetry.enableTelemetry": false,
   "breadcrumbs.enabled": false,
   "explorer.confirmDragAndDrop": false,
-  "python.pythonPath": "/Users/Adolfo/Projects/PyVenv/pythonenv/bin/python"
+  "python.pythonPath": "/Users/Adolfo/Projects/PyVenv/pythonenv/bin/python",
+  "workbench.startupEditor": "newUntitledFile"
 }

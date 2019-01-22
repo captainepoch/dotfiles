@@ -1,4 +1,5 @@
 (add-to-list 'load-path (concat user-emacs-directory "config"))
+(load "packages.el")
 (load "general.el")
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
