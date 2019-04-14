@@ -2,15 +2,22 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/epoch/Projects/repos/dotfiles/emacs/" . "config/")
+ ("/home/epoch/Projects/repos/dotfiles/" . "emacs/")
  ("/home/epoch/Projects/repos/adolpw_repo_webs/cv/" . "css/")
  ("/home/epoch/Projects/repos/adolpw_repo_webs/" . "contact/")
- ("/home/epoch/Projects/repos/" . "adolpw_repo_webs/")
+ ("/home/epoch/Projects/repos/" . "flasktutorial/")
  ("/home/epoch/Projects/" . "repos/")
  ("/home/epoch/" . "Projects/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/epoch/Projects/repos/flasktutorial/"
+ "/home/epoch/Projects/repos/dotfiles/emacs/config/"
+ "/home/epoch/"
+ "/home/epoch/Projects/repos/dotfiles/emacs/"
+ "/home/epoch/Projects/repos/contentblog/"
  "/home/epoch/Projects/repos/adolpw_repo_webs/contact/"
  "/home/epoch/Projects/repos/adolpw_repo_webs/cv/css/"
  "/home/epoch/Projects/repos/adolpw_repo_webs/"
@@ -18,6 +25,13 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "config.py"
+ "c.el"
+ "mainc.c"
+ "init.el"
+ "51-android.rules"
+ "license.md"
+ "main.c"
  "index.html"
  "custom.css"
  "README.md"
@@ -25,11 +39,25 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/epoch/Projects/repos/dotfiles/emacs/" (23584 50077 845696 744000) "ido.last" "mutt.el" "../" "init.el" "snippets/" "projectile-bookmarks.eld" "elpa/" "./" "auto-save-list/" "custom.el" "config/")
+ ("/home/epoch/Projects/repos/flasktutorial/" (23620 38583 15467 249000) ".directory" "__pycache__/" "requirements.txt" ".vscode/" "app.db" "../" "config.py" "README.md" "migrations/" "rafa/" "microblog.py" ".git/" "./" ".flaskenv")
+
+ ("/home/epoch/Projects/repos/dotfiles/emacs/config/" (23731 6494 345602 172000) "python.el" "general.el" "c.el" "../" "go.el" "development.el" "yaml.el" "text.el" "./" "user.el" "packages.el" "interface.el" "html.el" "rust.el")
+
+ ("/home/epoch/Projects/repos/dotfiles/emacs/" (23731 5131 245827 703000) "recentf" "ido.last" "mutt.el" "../" "init.el" "snippets/" "projectile-bookmarks.eld" "transient/" "elpa/" "./" "auto-save-list/" "custom.el" "config/")
+
+ ("/home/epoch/" (23731 3443 2766 929000) ".cargo/" "Music/" ".viminfo" ".directory" "Downloads/" ".rustup/" ".TeamSpeak 3/" ".gnome/" ".Xauthority" ".zshrc" ".nv/" ".kde4/" ".profile" ".wine/" "Pictures/" ".dbus/" ".thumbnails/" ".gtk-bookmarks" "Arduino/" ".wget-hsts" ".zcompdump-floppy-5.7" ".kde/" ".zprofile" ".bashrc" ".AndroidStudio3.3/" ".java/" "../" "mainc.c" "Documents/" ".sane/" "Videos/" ".pki/" ".sshugo/" ".smex-items" ".mozilla/" "Nextcloud/" ".installjammerinfo/" "Templates/" ".multirust/" ".zfunc/" ".gtkrc-2.0" ".zcompdump-floppy-5.5.1" ".gimp-2.8/" ".fonts.conf" ".bash_aliases" ".ts3client/" ".android/" ".ICEauthority" ".emulator_console_auth_token" ".nvidia-settings-rc" ".winbox/" ".zcompdump-floppy-5.7.1" "51-android.rules" ".thunderbird/" ".emacs.d/" ".oh-my-zsh/" ".cache/" ".vscode-oss/" ".bash_profile" "Desktop/" "./" ".bash_history" ".uml/" ".oracle_jre_usage/" ".ssh/" ".crashlytics/" ".zotero/" "Vaults/" ".gitconfig" ".idm/" "Public/" ".gnupg/" ".python_history" ".bash_logout" ".gtkrc-2.0-kde4" ".zcompdump-floppy-5.5" ".zsh_history" "Zotero/" ".sshuc3m/" ".esd_auth" ".gradle/" ".local/" ".config/" "Projects/" ".arduino15/" ".zcompdump-floppy-5.4.2" ".zcompdump-floppy-5.6.2")
+
+ ("/home/epoch/Projects/repos/dotfiles/" (23620 38297 984016 498000) "LICENSE" "emacs/" "../" "Xresources" "README.md" "emacs_old/" ".git/" "./" ".gitignore" "vscodium/" "zsh/")
+
+ ("/home/epoch/Projects/repos/dotfiles/zsh/" (23620 38297 984016 498000) "../" "candy_mod2.zsh-theme" "./" "zshrc" "zfunc/")
+
+ ("/home/epoch/Projects/repos/contentblog/" (23624 56575 956343 137000) "license.md" "../" "post/" ".git/" "./" "blog_privacy_policy.md")
+
+ ("/home/epoch/Projects/repos/" (23729 49506 128186 275000) "papaya_test/" "kanboardroid/" "../" "subbot/" "dotfiles/" "simple-hugo-theme/" "./" "flasktutorial/" "contentblog/" "main/")
+
+ ("/home/epoch/Projects/" (23645 45162 56379 792000) "assign/" "go/" "repos/" "../" "ServerBackups/" "PyVenv/" "./")
 
  ("/home/epoch/Projects/repos/adolpw_repo_webs/contact/" (23334 7812 0 0) "css/" "index.html" "humans.txt" "../" "./" "images/")
-
- ("/home/epoch/Projects/repos/dotfiles/" (23583 31544 984792 893000) "LICENSE" "emacs/" "../" "Xresources" "README.md" "emacs_old/" ".git/" "./" ".gitignore" "vscodium/" "zsh/")
 
  ("/home/epoch/Projects/repos/dotfiles/emacs_old/" (23572 59963 821375 28000) "../" "init.el" "snippets/" "elpa/" "./" "muttrc.el" "network-security.data" "config/")
 
@@ -39,13 +67,7 @@
 
  ("/home/epoch/Projects/repos/adolpw_repo_webs/cv/" (23334 7812 0 0) "css/" "index.html" "humans.txt" "../" "snippets.txt" "./" "images/")
 
- ("/home/epoch/" (23583 57023 931033 701000) ".cargo/" "Music/" ".viminfo" ".directory" "Downloads/" ".rustup/" ".TeamSpeak 3/" ".gnome/" ".Xauthority" ".zshrc" ".nv/" ".kde4/" ".profile" ".wine/" "Pictures/" ".dbus/" ".thumbnails/" ".gtk-bookmarks" ".wget-hsts" ".kde/" ".zprofile" ".bashrc" ".AndroidStudio3.0/" ".java/" "../" "Documents/" ".sane/" "Videos/" ".pki/" ".sshugo/" ".smex-items" ".mozilla/" "Nextcloud/" ".installjammerinfo/" "Templates/" ".multirust/" ".zfunc/" ".gtkrc-2.0" ".zcompdump-floppy-5.5.1" ".gimp-2.8/" ".AndroidStudio3.2/" ".fonts.conf" ".bash_aliases" ".ts3client/" ".android/" ".ICEauthority" ".emulator_console_auth_token" ".nvidia-settings-rc" ".winbox/" "51-android.rules" ".thunderbird/" ".emacs.d/" ".oh-my-zsh/" ".cache/" ".vscode-oss/" ".bash_profile" "#prueba.c#" ".i2p/" "Desktop/" "./" ".bash_history" ".AndroidStudio3.1/" ".uml/" ".oracle_jre_usage/" ".ssh/" ".crashlytics/" ".zotero/" "Vaults/" ".gitconfig" ".idm/" "Public/" ".gnupg/" ".python_history" ".bash_logout" ".gtkrc-2.0-kde4" ".zcompdump-floppy-5.5" ".zsh_history" "Zotero/" ".sshuc3m/" ".esd_auth" ".gradle/" ".local/" ".config/" "Projects/" ".zcompdump-floppy-5.4.2" ".zcompdump-floppy-5.6.2")
-
  ("/home/epoch/Projects/repos/adolpw_repo_webs/" (23334 7812 0 0) "cv/" "../" "contact/" "old_main/" "README.md" ".git/" "./" "projects/" ".gitignore" "main/" "gpg/")
-
- ("/home/epoch/Projects/repos/" (23583 16349 474470 473000) "papaya_test/" "../" "adolpw_repo_webs.tar.gz" "adolpw_repo_webs/" "dotfiles/" "./" "flasktutorial/")
-
- ("/home/epoch/Projects/" (23579 44467 402081 360000) "assign/" "go/" "repos/" "../" "PyVenv/" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

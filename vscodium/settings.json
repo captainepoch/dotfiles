@@ -12,7 +12,7 @@
   "rewrap.autoWrap.enabled": true,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
-  "prettier.disableLanguages": ["markdown"],
+  "prettier.disableLanguages": ["markdown", "md"],
   // Python
   "python.jediEnabled": false,
   "python.linting.enabled": true,
@@ -25,5 +25,8 @@
   "telemetry.enableTelemetry": false,
   "breadcrumbs.enabled": false,
   "explorer.confirmDragAndDrop": false,
-  "workbench.startupEditor": "none"
+"workbench.startupEditor": "none",
+"editor.suggestSelection": "first",
+"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+"explorer.confirmDelete": false
 }
