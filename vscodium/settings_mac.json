@@ -15,6 +15,9 @@
   "python.formatting.provider": "autopep8",
   "python.linting.lintOnSave": true,
   "python.venvPath": "~/Projects/PyVenv",
+  // C(++)
+  "C_Cpp.formatting": "Disabled",
+  "astyle.astylerc": "${workspaceRoot}/.vscode/astylerc",
   // Other
   "files.eol": "\n",
   "rewrap.autoWrap.enabled": true,
@@ -23,5 +26,6 @@
   "breadcrumbs.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "python.pythonPath": "/Users/Adolfo/Projects/PyVenv/pythonenv/bin/python",
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.confirmDelete": false
 }
