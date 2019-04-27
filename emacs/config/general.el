@@ -11,12 +11,15 @@
 (setq-default create-lockfiles nil)
 
 ;; Save always as UTF-8 and Unix endline
+(set-charset-priority 'unicode)
+(setq locale-coding-system 'utf-8)
 (prefer-coding-system 'utf-8-unix)
 (set-default-coding-systems 'utf-8-unix)
 (set-terminal-coding-system 'utf-8-unix)
 (set-keyboard-coding-system 'utf-8-unix)
 (set-selection-coding-system 'utf-8-unix)
 (setq-default buffer-file-coding-system 'utf-8-unix)
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
 
 ;; Put newlines at the end of every file
 (setq-default require-final-newline t)
@@ -84,6 +87,12 @@
 ;; Misc. key bindings
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+;; Allow clipboard from outside emacs
+(setq select-enable-clipboard t
+      save-interprogram-paste-before-kill t
+      apropos-do-all t
+      mouse-yank-at-point t)
+
 ;; uniquify - better disambiguation for same-named files
 (use-package uniquify
   :config
@@ -128,6 +137,8 @@
 ;; syntax-subgord - fine-grained text operations
 ;; used to kill like vim/sublime/vscodium
 (use-package syntax-subword
+  :ensure t
+  :pin melpa
   :init
   (setq syntax-subword-skip-spaces t)
   :config

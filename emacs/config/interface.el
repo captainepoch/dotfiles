@@ -20,17 +20,23 @@
 (set-frame-position (selected-frame) 1 1)
 
 ;; Color scheme
-(use-package doom-themes
+;;(use-package doom-themes
+;;  :ensure t
+;;  :config
+;;  ;; Enable custom neotree theme (all-the-icons must be installed!)
+;;  (doom-themes-neotree-config)
+;;  ;; or for treemacs users
+;;  (doom-themes-treemacs-config)
+;;  ;; Corrects (and improves) org-mode's native fontification.
+;;  (doom-themes-org-config)
+;;  )
+;;(load-theme 'doom-one t)
+
+(use-package spacemacs-theme
   :ensure t
-  :config
-  ;; Enable custom neotree theme (all-the-icons must be installed!)
-  ;;(doom-themes-neotree-config)
-  ;; or for treemacs users
-  ;;(doom-themes-treemacs-config)
-  ;; Corrects (and improves) org-mode's native fontification.
-  ;;(doom-themes-org-config)
-  )
-(load-theme 'doom-one t)
+  :defer t
+  :init
+  (load-theme 'spacemacs-dark t))
 
 ;; Dark window border on OS X
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))

@@ -1,13 +1,26 @@
-;; elpy - emacs python dev. env.
-;;pip(2) install --upgrade jedi flake8 pep8 importmagic autopep8 yapf nose
-(use-package elpy
+;; Packages to install with pip(2):
+;; jedi flake8 pep8 importmagic autopep8 yapf nose
+
+;; python, elpy - Python + elpy configuration
+(use-package python
   :ensure t
-  :commands elpy-enable
-  :init (with-eval-after-load 'python (elpy-enable))
+  :mode (
+		 ("\\.py" . python-mode)
+		 ("\\.wsgi" . python-mode))
   :config
-  (electric-indent-local-mode -1)
-  (delete 'elpy-module-highlight-indentation elpy-modules)
-  (delete 'elpy-module-flymake elpy-modules))
+  (use-package elpy
+    :ensure t
+    :init
+    (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+    (add-to-list 'auto-mode-alist '("\\.wsgi$" . python-mode))
+    :config
+    (setq elpy-rpc-backend "jedi")
+    ;; (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+    ;;flycheck-python-flake8-executable "/usr/local/bin/flake8"
+    :bind (:map elpy-mode-map
+				("M-." . elpy-goto-definition)
+				("M-," . pop-tag-mark)))
+  (elpy-enable))
 
 ;; jedi - Python auto-completion for Emacs
 ;; company-jedi - company backend for Python's jedi

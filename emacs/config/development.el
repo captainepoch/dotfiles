@@ -25,7 +25,7 @@
   (setq-default neo-smart-open t)
   (setq neo-force-change-root t)
   (setq neo-window-fixed-size nil))
-(add-hook 'server-switch-hook (lambda () (call-interactively 'neotree-show)))
+;;(add-hook 'server-switch-hook (lambda () (call-interactively 'neotree-show)))
 (add-hook 'neo-after-create-hook
 		  (lambda (&rest _) (display-line-numbers-mode -1)))
 

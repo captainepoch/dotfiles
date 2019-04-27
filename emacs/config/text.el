@@ -15,7 +15,7 @@
 	(interactive)
 	(ispell-change-dictionary "english"))
 
-										;:hook (org-mode . (lambda () (setq ispell-parser 'tex)))
+  ;; :hook (org-mode . (lambda () (setq ispell-parser 'tex)))
   :bind (:map flyspell-mode-map
 			  ("C-c d s" . change-dictionary-spanish)
 			  ("C-c d e" . change-dictionary-english)))
@@ -28,7 +28,10 @@
 (use-package markdown-mode
   :ensure t
   :defer t
-  :mode ("\\.md\\'" "\\.mdown\\'" "\\.markdown\\'")
+  :mode (
+		 ("\\.md" . markdown-mode)
+		 ("\\.mdown" . markdown-mode)
+		 ("\\.markdown" . markdown-mode))
   :init
   (add-hook 'markdown-mode-hook
 			(lambda ()

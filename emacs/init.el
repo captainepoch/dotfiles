@@ -16,20 +16,23 @@
 ;; C(++) hook
 (add-hook 'c-mode-hook (load "c.el"))
 
+;; Python hook
+(add-hook 'python-mode-hook (load "python.el"))
+
 ;; Rust hook
-;;(add-hook 'rust-mode-hook (load "rust.el"))
+(add-hook 'rust-mode-hook (load "rust.el"))
 
 ;; Golang hook
 (add-hook 'go-mode-hook (load "go.el"))
+
+;; PHP hook
+(add-hook 'web-mode-hook (load "php.el"))
 
 ;; HTML hook
 (add-hook 'web-mode-hook (load "html.el"))
 
 ;; YAML hook
 (add-hook 'yaml-mode-hook (load "yaml.el"))
-
-;; Python hook
-;;(add-hook 'python-mode-hook (load "python.el"))
 
 ;; Text hook
 (add-hook 'text-mode-hook (load "text.el"))

@@ -5,9 +5,9 @@
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 (package-initialize)
 
-;; Force refresh contents
-;;; TODO: refresh when package not installed
-(package-refresh-contents)
+;; Refresh contents when packages are not installed
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 ;; Bootstrap use-package
 (unless (package-installed-p 'use-package)
