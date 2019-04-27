@@ -1,3 +1,7 @@
+;; Move to beginning/end of a function
+(global-set-key (kbd "M-<up>") 'beginning-of-defun)
+(global-set-key (kbd "M-<down>") 'end-of-defun)
+
 ;; exec-path-from-shell - system's $PATH
 (use-package exec-path-from-shell
   :ensure t
@@ -103,12 +107,9 @@
   :config (company-quickhelp-mode)
   :bind ("C-c h" . #'company-quickhelp-manual-begin))
 
-(use-package projectile
+;; mwim -- move to the beginning/end code line
+(use-package mwim
   :ensure t
-  :config
-  (projectile-global-mode 1)
-  (define-key projectile-mode-map (kbd "C-C p") 'projectile-command-map)
-  (setq projectile-use-git-grep t
-		;; Fix for compilation command and `generic` projects
-		projectile-project-compilation-cmd ""
-		projectile-project-run-cmd ""))
+  :bind
+  ("C-a" . mwim-beginning-of-code-or-line)
+  ("C-e" . mwim-end-of-code-or-line))

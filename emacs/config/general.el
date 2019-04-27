@@ -124,3 +124,11 @@
 (use-package unkillable-scratch
   :ensure t
   :init (unkillable-scratch))
+
+;; syntax-subgord - fine-grained text operations
+;; used to kill like vim/sublime/vscodium
+(use-package syntax-subword
+  :init
+  (setq syntax-subword-skip-spaces t)
+  :config
+  (global-syntax-subword-mode))
