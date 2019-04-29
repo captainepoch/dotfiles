@@ -61,7 +61,7 @@
 					:background (face-background 'default))
 
 ;; Font config
-(if (eq system-type 'gnu-linux)
+(if (eq system-type 'gnu/linux)
 	(add-to-list 'default-frame-alist '(font . "Liberation Mono-10"))
   (set-face-attribute 'default t :font "Liberation Mono-10"))
 (if (eq system-type 'darwin)
