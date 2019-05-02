@@ -1,0 +1,32 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/epoch/Nextcloud/Stuff/" . "Privacy Config/")
+ ("/home/epoch/Nextcloud/" . "Stuff/")
+ ("/home/epoch/" . "Nextcloud/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/epoch/Nextcloud/Stuff/Privacy Config/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "user.js"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/epoch/Nextcloud/" (23753 21555 185797 674000) "img_eggsif_2573331624272638652.jpg" "images.jpg" "IMG_20190411_205944.jpg" "thumb-1920-909663.png" ".owncloudsync.log.1" "Q98jIX1.jpg" "Images/" "1*UCzleeBdx2q8tX6i3zsLnQ.png" "zge85fc9j0g11.jpg" "Work/" "SRV/" "Stuff/" "1556437496188.png" "2019-04-16 20_22_49-Clipboard.png" "npc.png" "IMG_20190427_211352.jpg" "images(2).jpg" "../" "1556116413498.png" "gbcpuman.pdf" "IMG_20190420_103823 (3).jpg" ".owncloudsync.log" "Jijo/" "8b2vab5z9vs21.jpg" "Books/" "._sync_9ae0c0b34284.db-wal" "1555366569452.jpg" "IMG_20190420_103823 (2).jpg" "IMG_20190419_212824.jpg" "b98eceee377dcff4.jpeg" "limiting_kernel_attack_surface_with_seccomp-LPC_2015-Kerrisk.pdf" "._sync_9ae0c0b34284.db" "4_5927125971663586635.epub" "0c178abe81923a5d.png" "IMG_20190401_085547.jpg" "759b31fb28166ff5.png" "IMG_20190402_200622.jpg" "The Android Security Platform.pdf" "Major Hans von Dach - Total Resistance.pdf" "IMG_20190412_212057.jpg" "1280px-Meandros_flag.svg.png" "Screenshot_20190409-071511_Telegram.png" "IMG_6504.jpg" "2019-04-20 13_21_52-Clipboard.png" "IMG_20190402_201150.jpg" "RENTA ADOLFO 2018.pdf" "./" "GuiaOrdenLecturaMundodisco3.png" "1547486880647.jpg" "IMG_20190420_103823.jpg" "tuba skinny_nigel's dream flac.tar" "bq-5c38bb6cb6fa4.jpg" "IMG_20190413_130512.jpg" "images(3).jpg" "Tusky_1549991690407_7PG3M46YPC.png" "._sync_9ae0c0b34284.db-shm" "Library/" "IMG_20190402_201150 (2).jpg" "Projects/" "Screenshot_20190409-071536_Telegram.png" "Dev/" "IMG_20190402_200622 (2).jpg" "21e43127f437ceb3.jpeg")
+
+ ("/home/epoch/" (23753 21430 3302 602000) ".cargo/" "Music/" ".viminfo" ".directory" "Downloads/" ".rustup/" ".TeamSpeak 3/" ".gnome/" ".Xauthority" ".zshrc" ".nv/" ".kde4/" ".profile" ".wine/" "Pictures/" ".dbus/" ".thumbnails/" ".gtk-bookmarks" "Arduino/" ".wget-hsts" ".zcompdump-floppy-5.7" ".kde/" ".zprofile" ".bashrc" ".java/" "../" "Documents/" ".sane/" "Videos/" ".pki/" ".sshugo/" ".smex-items" ".mozilla/" "Nextcloud/" ".installjammerinfo/" "Templates/" ".multirust/" ".zfunc/" ".gtkrc-2.0" ".zcompdump-floppy-5.5.1" ".gimp-2.8/" ".fonts.conf" ".bash_aliases" ".ts3client/" ".android/" ".ICEauthority" ".emulator_console_auth_token" ".nvidia-settings-rc" ".winbox/" ".zcompdump-floppy-5.7.1" ".audacity-data/" "51-android.rules" ".thunderbird/" ".emacs.d/" ".oh-my-zsh/" ".AndroidStudio3.4/" ".cache/" ".vscode-oss/" ".bash_profile" "Desktop/" "./" ".bash_history" ".uml/" ".oracle_jre_usage/" ".ssh/" ".crashlytics/" ".zotero/" "Vaults/" ".gitconfig" ".idm/" "Public/" ".gnupg/" ".python_history" ".bash_logout" ".gtkrc-2.0-kde4" ".zcompdump-floppy-5.5" ".zsh_history" "Zotero/" ".sshuc3m/" ".esd_auth" ".gradle/" ".local/" ".config/" "Projects/" ".arduino15/" ".jssc/" ".zcompdump-floppy-5.4.2" ".zcompdump-floppy-5.6.2")
+
+ ("/home/epoch/Nextcloud/Stuff/Privacy Config/" (23736 30546 942904 548000) "msoc.txt" "ublock_origin.txt" "../" "noscript_data.txt" "Quassel/" "privacy_badger.json" "wallabag.json" "Mastodon/" "user.js" "./" "CanvasBlocker-settings.json" "ublock_origin_static_filters.txt" "CAD_Expressions_Linux.json" "config")
+
+ ("/home/epoch/Nextcloud/Stuff/" (23729 35836 582028 883000) "Pokemon Red - by MrSquishy.zip" "CV/" "Rick and Morty - 3D Print Design.zip" "ArchLinux/" "Mail/" "Webs/" "LLAVES JCD.zip" "Operating Systems/" "Games/" "Talks/" "../" "Typography/" "Recover/" "Mac apps/" "test/" "Computers/" "Wifi Password Android.zip" "./" "firetray-0.6.5.xpi" "Android/" "Privacy Config/" "Vídeos/" "Network/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

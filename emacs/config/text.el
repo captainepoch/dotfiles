@@ -38,4 +38,8 @@
 			  (visual-line-mode t)
 			  (writegood-mode t)
 			  (flyspell-mode t)))
-  (setq-default word-wrap t))
+  (setq-default word-wrap t)
+  :config
+  (setq-default fill-column 72)
+  (add-hook 'text-mode-hook 'turn-on-auto-fill)
+  (setq-default auto-fill-function 'do-auto-fill))
