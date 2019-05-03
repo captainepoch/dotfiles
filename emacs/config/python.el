@@ -5,8 +5,8 @@
 (use-package python
   :ensure t
   :mode (
-		 ("\\.py" . python-mode)
-		 ("\\.wsgi" . python-mode))
+		 ("\\.py$" . python-mode)
+		 ("\\.wsgi$" . python-mode))
   :config
   (use-package elpy
     :ensure t
@@ -34,3 +34,13 @@
 	:init
 	(add-hook 'python-mode-hook (lambda () (add-to-list 'company-backends 'company-jedi)))
 	(setq company-jedi-python-bin "python")))
+
+;; virtualenvwrapper - virtualenvs within emacs
+;; TODO: activate automatically opening a file inside the project
+(use-package virtualenvwrapper
+  :ensure t
+  :config
+  (venv-initialize-interactive-shells)
+  (venv-initialize-eshell)
+  (setq venv-location "~/Projects/PyVenv"))
+
