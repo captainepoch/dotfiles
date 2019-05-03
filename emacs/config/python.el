@@ -36,7 +36,6 @@
 	(setq company-jedi-python-bin "python")))
 
 ;; virtualenvwrapper - virtualenvs within emacs
-;; TODO: activate automatically opening a file inside the project
 (use-package virtualenvwrapper
   :ensure t
   :config

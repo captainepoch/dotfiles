@@ -7,11 +7,3 @@ emacs/*
 !emacs/mutt.el
 !emacs/custom.el
 !emacs/ido.last
-
-# VSCodium
-!vscodium
-vscodium/*
-!vscodium/extensions.sh
-!vscodium/extensions.txt
-!vscodium/settings.json
-!vscodium/settings_mac.json
