@@ -5,5 +5,5 @@ emacs/*
 !emacs/config
 !emacs/init.el
 !emacs/mutt.el
-!emacs/custom.el
+emacs/custom.el
 !emacs/ido.last
