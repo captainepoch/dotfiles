@@ -1,6 +1,10 @@
 ;; Packages to install with pip(2):
 ;; jedi flake8 pep8 importmagic autopep8 yapf nose
 
+;; python-mode - python-mode for emacs
+(use-package python-mode
+  :ensure t)
+
 ;; python, elpy - Python + elpy configuration
 (use-package python
   :ensure t
