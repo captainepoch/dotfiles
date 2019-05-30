@@ -45,6 +45,5 @@
   :config
   (venv-initialize-interactive-shells)
   (venv-initialize-eshell)
-  (setq venv-dirlookup-names '(".dir_venv"))
   (setq venv-location "~/Projects/PyVenv"))
 
