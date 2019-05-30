@@ -46,4 +46,3 @@
   (venv-initialize-interactive-shells)
   (venv-initialize-eshell)
   (setq venv-location "~/Projects/PyVenv"))
-

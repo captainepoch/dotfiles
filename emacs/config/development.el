@@ -33,12 +33,9 @@
 (use-package projectile
   :ensure t
   :config
-  ;;(setq projectile-completion-system 'ivy)
-  ;;(setq projectile-known-projects-file
-  ;;      (expand-file-name "projectile-bookmarks.eld" temp-dir))
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (setq projectile-switch-project-action 'neotree-projectile-action)
-  (projectile-global-mode))
+  (projectile-global-mode 1)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
+  ;;(setq projectile-switch-project-action 'neotree-projectile-action))
 
 ;; eldoc - shows the argument list of the function call
 (use-package eldoc
