@@ -116,12 +116,13 @@
   :config
   (global-hl-todo-mode))
 
-;; smarparens - better parents
-(use-package smartparens
-  :ensure t
-  :config
-  (add-hook 'prog-mode-hook #'smartparens-mode)
-  (sp-pair "{" nil :post-handlers '(("||\n[i]" "RET"))))
+;; smartparens - better parents
+;; (use-package smartparens
+;;   :ensure t
+;;   :config
+;;   (sp-use-paredit-bindings)
+;;   (add-hook 'prog-mode-hook #'smartparens-mode)
+;;   (sp-pair "{" nil :post-handlers '(("||\n[i]" "RET"))))
 
 ;; undo-tree - a undo tree
 (use-package undo-tree

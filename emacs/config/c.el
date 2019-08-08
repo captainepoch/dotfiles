@@ -21,7 +21,7 @@
 (setq-default c-basic-offset tab-width)
 
 ;; Default C coding style
-;; (setq-default c-default-style "k&r")
+(setq-default c-default-style "k&r")
 
 ;; Delete hungrily
 (setq-default c-hungry-delete-key t)
@@ -62,5 +62,5 @@
   (add-to-list 'company-backends 'company-c-headers))
 
 ;; Bind company-completion
-(define-key c-mode-map  [(tab)] 'company-complete)
-(define-key c++-mode-map  [(tab)] 'company-complete)
+(define-key c-mode-map  [(C-tab)] 'company-complete)
+(define-key c++-mode-map  [(C-tab)] 'company-complete)
