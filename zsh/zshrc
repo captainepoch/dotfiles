@@ -60,9 +60,10 @@ export RUST_PATH="$HOME/Projects/.cargo/bin"
 # User configuration
 case $(uname -s) in
 	"Linux")
-		NEW_PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/bin/core_perl"
+		CORE_PERL="/usr/bin/core_perl"
 		AND_PLATOOLS="/opt/android-sdk/platform-tools"
-		export PATH="$NEW_PATH:$GOPATH:$GOPATH_BIN:$AND_PLATOOLS"
+		AND_TOOLS="/opt/android-sdk/tools"
+		export PATH="$PATH:$CORE_PERL:$AND_PLATOOLS:$AND_TOOLS"
 		;;
 	"Darwin")
 		LATEX_PATH="/Library/TeX/texbin"
@@ -74,7 +75,7 @@ case $(uname -s) in
 		;;
 esac
 
-export PATH="$PATH:$RUST_PATH"
+export PATH="$PATH:$GOPATH:$GOPATH_BIN:$RUST_PATH"
 
 fpath+=~/.zfunc
 
