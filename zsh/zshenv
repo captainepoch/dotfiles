@@ -1,0 +1,27 @@
+# Go env.
+export GOPATH="$HOME/Projects/go"
+export GOPATH_BIN="$GOPATH/bin"
+
+# Rust env.
+export RUST_PATH="$HOME/Projects/.cargo/bin"
+
+case $(uname -s) in
+	"Linux")
+		CORE_PERL="/usr/bin/core_perl"
+		AND_PLATOOLS="/opt/android-sdk/platform-tools"
+		AND_TOOLS="/opt/android-sdk/tools"
+		export PATH="$PATH:$CORE_PERL:$AND_PLATOOLS:$AND_TOOLS"
+		;;
+	"Darwin")
+		LATEX_PATH="/Library/TeX/texbin"
+		CODE_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
+		NEW_PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+		export PATH="$NEW_PATH:$GOPATH:$GOPATH_BIN:$LATEX_PATH:$CODE_PATH"
+		# Mutt charset
+		export LC_ALL=es_ES.UTF-8
+		;;
+esac
+
+export PATH="$PATH:$GOPATH:$GOPATH_BIN:$RUST_PATH"
+
+fpath+=~/.zfunc

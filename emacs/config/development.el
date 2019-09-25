@@ -5,7 +5,11 @@
 ;; exec-path-from-shell - system's $PATH
 (use-package exec-path-from-shell
   :ensure t
-  :config (exec-path-from-shell-initialize))
+  :config
+  (setq exec-path-from-shell-arguments '("-l"))
+  (exec-path-from-shell-copy-env "PATH")
+  (exec-path-from-shell-copy-env "GOPATH")
+  (exec-path-from-shell-initialize))
 
 ;; comment-dwim-2 - superior commenting
 (use-package comment-dwim-2

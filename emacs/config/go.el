@@ -12,27 +12,23 @@
 							(set (make-local-variable 'company-backends) '(company-go))
 							(company-mode))))
 
-;; go-flycheck - adds flycheck for Golang
-(add-to-list 'load-path "~/Projects/go/src/github.com/dougm/goflymake")
-(use-package go-flycheck)
-
 ;; company-go - company support for Golang
-;;(https://github.com/nsf/gocode)
+;; (go get -u github.com/nsf/gocode)
 (use-package company-go
   :ensure t
   :after go-mode
   :config
   (setq tab-width tab-width)
-
   ;; Godef jump key binding
   :bind (:map go-mode-map
 			  ("M-." . godef-jump)))
 
 (use-package flymake-go
-  :ensure t)
+  :ensure t
+  :after go-mode)
 
 ;; go-eldoc - eldoc support for Golang
-;;(https://github.com/nsf/gocode)
+;; (go get -u github.com/nsf/gocode)
 (use-package go-eldoc
   :ensure t
   :diminish eldoc-mode
