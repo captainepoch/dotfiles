@@ -2,9 +2,6 @@
 export GOPATH="$HOME/Projects/go"
 export GOPATH_BIN="$GOPATH/bin"
 
-# Rust env.
-export RUST_PATH="$HOME/Projects/.cargo/bin"
-
 case $(uname -s) in
 	"Linux")
 		CORE_PERL="/usr/bin/core_perl"
@@ -22,6 +19,10 @@ case $(uname -s) in
 		;;
 esac
 
-export PATH="$PATH:$GOPATH:$GOPATH_BIN:$RUST_PATH"
+export PATH="$PATH:$GOPATH:$GOPATH_BIN"
+
+# Brew packages
+## OpenSSL
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 fpath+=~/.zfunc
