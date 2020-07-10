@@ -19,7 +19,9 @@ case $(uname -s) in
 		;;
 esac
 
-export PATH="$PATH:$GOPATH:$GOPATH_BIN"
+DOTFILES_BIN="$HOME/.dotfiles/bin"
+
+export PATH="$PATH:$GOPATH:$GOPATH_BIN:$DOTFILES_BIN"
 
 # Brew packages
 ## OpenSSL
