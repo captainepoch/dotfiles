@@ -10,4 +10,4 @@ There's a bash script called *backup.sh*. It copies all folders and files in whi
 Config is set up with the *set_config.sh* script to the home dir of the other of my computers.
 
 # LICENSE
-[MIT](https://github.com/adolphenom/dotfiles/blob/master/LICENSE).
+[MIT](./COPYING).
