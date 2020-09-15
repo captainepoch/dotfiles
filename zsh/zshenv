@@ -7,13 +7,18 @@ case $(uname -s) in
 		CORE_PERL="/usr/bin/core_perl"
 		AND_PLATOOLS="/opt/android-sdk/platform-tools"
 		AND_TOOLS="/opt/android-sdk/tools"
+
 		export PATH="$PATH:$CORE_PERL:$AND_PLATOOLS:$AND_TOOLS"
 		;;
 	"Darwin")
+		SBIN_PATH="/usr/local/sbin"
 		LATEX_PATH="/Library/TeX/texbin"
 		CODE_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
-		NEW_PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-		export PATH="$NEW_PATH:$GOPATH:$GOPATH_BIN:$LATEX_PATH:$CODE_PATH"
+
+		BREW_OPENSSL="/usr/local/opt/openssl@1.1/bin"
+
+		export PATH="$PATH:$SBIN_PATH:$BREW_OPENSSL:$LATEX_PATH:$CODE_PATH"
+
 		# Mutt charset
 		export LC_ALL=es_ES.UTF-8
 		;;
@@ -22,9 +27,5 @@ esac
 DOTFILES_BIN="$HOME/.dotfiles/bin"
 
 export PATH="$PATH:$GOPATH:$GOPATH_BIN:$DOTFILES_BIN"
-
-# Brew packages
-## OpenSSL
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 fpath+=~/.zfunc
