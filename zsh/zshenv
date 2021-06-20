@@ -15,12 +15,10 @@ case $(uname -s) in
 		LATEX_PATH="/Library/TeX/texbin"
 		CODE_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
 
-		BREW_OPENSSL="/usr/local/opt/openssl@1.1/bin"
-
 		# Mutt charset
 		export LC_ALL=es_ES.UTF-8
 
-		export PATH="$PATH:$SBIN_PATH:$BREW_OPENSSL:$LATEX_PATH:$CODE_PATH"
+		export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$CODE_PATH"
 		;;
 esac
 
