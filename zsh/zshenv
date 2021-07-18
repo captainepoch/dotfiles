@@ -5,8 +5,8 @@ export GOPATH_BIN="$GOPATH/bin"
 case $(uname -s) in
 	"Linux")
 		CORE_PERL="/usr/bin/core_perl"
-		AND_PLATOOLS="/opt/android-sdk/platform-tools"
-		AND_TOOLS="/opt/android-sdk/tools"
+		AND_PLATOOLS="$HOME/Android/Sdk/platform-tools"
+		AND_TOOLS="$HOME/Android/Sdk/android-sdk/tools"
 
 		export PATH="$PATH:$CORE_PERL:$AND_PLATOOLS:$AND_TOOLS"
 		;;
