@@ -11,6 +11,8 @@ case $(uname -s) in
 		export PATH="$PATH:$CORE_PERL:$AND_PLATOOLS:$AND_TOOLS"
 		;;
 	"Darwin")
+		export JAVA_HOME=$(/usr/libexec/java_home)
+
 		SBIN_PATH="/usr/local/sbin"
 		LATEX_PATH="/Library/TeX/texbin"
 		CODE_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
