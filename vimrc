@@ -28,6 +28,14 @@ set formatoptions+=t
 set formatoptions-=l
 set colorcolumn=-2
 "--------------------------------"
+" Buffer-specific settings
+"--------------------------------"
+autocmd Filetype gitcommit setlocal tw=72
+autocmd FileType markdown setlocal et ts=2 sw=2
+autocmd FileType mail setlocal noautoindent tw=72
+augroup filetypedetect
+  autocmd BufRead,BufNewFile *mutt-* setfiletype mail
+"--------------------------------"
 " File and encoding
 "--------------------------------"
 filetype off
