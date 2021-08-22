@@ -17,6 +17,11 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set smarttab
+set nowrap
+set ruler
+set splitbelow
+set hidden
+set notimeout
 set clipboard=unnamedplus
 set backspace=indent,eol,start
 "--------------------------------"
@@ -27,6 +32,7 @@ set wrapmargin=2
 set formatoptions+=t
 set formatoptions-=l
 set colorcolumn=-2
+set cc=80
 "--------------------------------"
 " Buffer-specific settings
 "--------------------------------"
