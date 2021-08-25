@@ -2,7 +2,6 @@
 " Colorscheme
 "--------------------------------"
 set t_Co=256
-colorscheme sunburst
 syntax on
 set completeopt-=preview
 "--------------------------------"
@@ -25,6 +24,14 @@ set notimeout
 set clipboard=unnamedplus
 set backspace=indent,eol,start
 "--------------------------------"
+" File and encoding
+"--------------------------------"
+filetype off
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,ucs-bom,latin1
+set nu!
+"--------------------------------"
 " Width and formating
 "--------------------------------"
 set textwidth=80
@@ -42,14 +49,6 @@ autocmd FileType mail setlocal noautoindent tw=72
 augroup filetypedetect
   autocmd BufRead,BufNewFile *mutt-* setfiletype mail
 "--------------------------------"
-" File and encoding
-"--------------------------------"
-filetype off
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8,ucs-bom,latin1
-set nu!
-"--------------------------------"
 " Remap yank & paste (clipboard)
 "--------------------------------"
 nnoremap <C-y> "+y
@@ -63,15 +62,21 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " PLUGINS
 Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'Yggdroot/indentLine'
+Plugin 'ervandew/SuperTab'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'godlygeek/tabular'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'ervandew/SuperTab'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Yggdroot/indentLine'
 call vundle#end()
 filetype plugin indent on
+"--------------------------------"
+" Plugin - vim-colorschemes
+"--------------------------------"
+colorscheme xoria256
 "--------------------------------"
 " Plugin - vim-airline
 "--------------------------------"
@@ -80,6 +85,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set laststatus=2
+let g:airline_theme='wombat'
 "--------------------------------"
 " Plugin - indentLine
 "--------------------------------"
