@@ -4,7 +4,7 @@ export GOPATH_BIN="$GOPATH/bin"
 
 case $(uname -s) in
 	"Linux")
-		export JAVA_HOME=/usr/lib/jvm/default
+		export JAVA_HOME="/usr/lib/jvm/default"
 
 		CORE_PERL="/usr/bin/core_perl"
 		AND_PLATOOLS="$HOME/Android/Sdk/platform-tools"
