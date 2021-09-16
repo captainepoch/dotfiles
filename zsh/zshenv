@@ -19,7 +19,7 @@ case $(uname -s) in
 		LATEX_PATH="/Library/TeX/texbin"
 		CODE_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
 
-        AND_TOOLS="$HOME/Library/Android/sdk/platform-tools/"
+		AND_TOOLS="$HOME/Library/Android/sdk/platform-tools/"
 
 		# Mutt charset
 		export LC_ALL=es_ES.UTF-8

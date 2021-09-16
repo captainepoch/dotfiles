@@ -43,7 +43,7 @@ set cc=80
 "--------------------------------"
 " Buffer-specific settings
 "--------------------------------"
-autocmd Filetype gitcommit setlocal tw=72
+autocmd Filetype gitcommit setlocal tw=72 encoding=utf-8 fileencoding=utf-8
 autocmd FileType markdown setlocal et ts=2 sw=2
 autocmd FileType mail setlocal noautoindent tw=72
 augroup filetypedetect
