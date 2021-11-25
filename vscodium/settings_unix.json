@@ -1,0 +1,115 @@
+{
+	// Editor
+	"editor.autoClosingBrackets": "always",
+	"editor.autoClosingDelete": "auto",
+	"editor.autoClosingOvertype": "auto",
+	"editor.comments.insertSpace": false,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.fontFamily": "'Liberation Mono', 'Droid Sans Mono', 'monospace', monospace",
+	"editor.fontLigatures": false,
+	"editor.fontSize": 13,
+	"editor.formatOnSave": true,
+	"editor.rulers": [
+		80,
+		100
+	],
+	"editor.scrollBeyondLastLine": false,
+	"editor.suggestSelection": "first",
+	"editor.tabSize": 4,
+	"editor.trimAutoWhitespace": true,
+	"files.encoding": "utf8",
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"rewrap.autoWrap.enabled": true,
+	"window.restoreWindows": "none",
+	"workbench.editor.enablePreview": false,
+	"workbench.editor.untitled.hint": "hidden",
+	"workbench.enableExperiments": false,
+	"workbench.startupEditor": "none",
+	"workbench.settings.enableNaturalLanguageSearch": false,
+	// HTML
+	"html.autoClosingTags": true,
+	"html.completion.attributeDefaultValue": "doublequotes",
+	"html.format.contentUnformatted": "pre",
+	"html.format.wrapAttributes": "force-aligned",
+	"html.validate.styles": true,
+	// Go
+	"go.autocompleteUnimportedPackages": true,
+	"go.docsTool": "godoc",
+	"go.formatTool": "gofmt",
+	"go.gopath": "~/Projects/go",
+	"go.lintTool": "golint",
+	"go.useCodeSnippetsOnFunctionSuggest": true,
+	// Python
+	"python.autoComplete.addBrackets": true,
+	"python.formatting.provider": "autopep8",
+	"python.linting.enabled": true,
+	"python.linting.flake8Enabled": true,
+	"python.linting.lintOnSave": true,
+	"python.linting.pylintEnabled": false,
+	"python.languageServer": "Jedi",
+	"python.venvFolders": [
+		"Projects/PyVenv",
+		"~/.pyenv/versions"
+	],
+	"python.venvPath": "${workspaceFolderBasename}",
+	// C(++)
+	"astyle.astylerc": "${workspaceFolderBasename}/codestyle/astylerc",
+	"C_Cpp.formatting": "Disabled",
+	// Other
+	"breadcrumbs.enabled": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"npm.fetchOnlinePackageInfo": false,
+	"security.workspace.trust.enabled": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"telemetry.telemetryLevel": "off",
+	"update.mode": "none",
+	// Formaters
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.suggest.insertMode": "replace",
+		"editor.tabSize": 2
+	},
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 2
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 2
+	},
+	"[jinja-html]": {
+		"editor.tabSize": 2
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[markdown]": {
+		"editor.formatOnSave": false,
+		"editor.quickSuggestions": false,
+		"editor.wordWrap": "off"
+	},
+	"[python]": {
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": true
+	},
+	"sass.format.enabled": false,
+	"[yaml]": {
+		"editor.autoIndent": "advanced",
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	}
+}
