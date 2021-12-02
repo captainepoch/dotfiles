@@ -45,10 +45,19 @@
 	"go.useCodeSnippetsOnFunctionSuggest": true,
 	// Python
 	"python.formatting.provider": "autopep8",
-	"python.linting.enabled": true,
-	"python.linting.lintOnSave": true,
-	"python.linting.pylintEnabled": true,
 	"python.languageServer": "Jedi",
+	"python.linting.enabled": true,
+	"python.linting.flake8Args": [
+		"--jobs=2",
+		"--verbose"
+	],
+	"python.linting.flake8Enabled": true,
+	"python.linting.lintOnSave": true,
+	"python.linting.pydocstyleEnabled": true,
+	"python.linting.pylintArgs": [
+		"-j", "2"
+	],
+	"python.linting.pylintEnabled": true,
 	"python.venvFolders": [
 		"Projects/PyVenv",
 		"~/.pyenv/versions"
