@@ -45,7 +45,7 @@ set cc=80
 "--------------------------------"
 autocmd Filetype gitcommit setlocal tw=72 encoding=utf-8 fileencoding=utf-8
 autocmd FileType markdown setlocal et ts=2 sw=2
-autocmd FileType mail setlocal noautoindent tw=72
+autocmd FileType mail setlocal noautoindent tw=72 tabstop=4 shiftwidth=4 expandtab
 augroup filetypedetect
   autocmd BufRead,BufNewFile *mutt-* setfiletype mail
 autocmd BufWritePre * :%s/\s\+$//e
