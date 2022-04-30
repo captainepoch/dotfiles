@@ -1,3 +1,5 @@
+DOTFILES_BIN="$HOME/.dotfiles/bin"
+
 # Go environment
 export GOPATH="$HOME/Projects/go"
 export GOPATH_BIN="$GOPATH/bin"
@@ -5,32 +7,34 @@ export GOPATH_BIN="$GOPATH/bin"
 case $(uname -s) in
 	"Linux")
 		export JAVA_HOME="/usr/lib/jvm/default"
+		export ANDROID_HOME=""
 
+		# TODO
+		ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
+		# TODO
+		ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/31.0.0"
 		CORE_PERL="/usr/bin/core_perl"
-		AND_PLATOOLS="$HOME/Android/Sdk/platform-tools"
-		AND_TOOLS="$HOME/Android/Sdk/android-sdk/tools"
 
-		export PATH="$PATH:$CORE_PERL:$AND_PLATOOLS"
+		export PATH="$PATH:$CORE_PERL"
 		;;
 	"Darwin")
 		export JAVA_HOME=$(/usr/libexec/java_home)
+		export ANDROID_HOME="$HOME/Library/Android/sdk"
 
-		SBIN_PATH="/usr/local/sbin"
 		LATEX_PATH="/Library/TeX/texbin"
-		CODE_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
+		SBIN_PATH="/usr/local/sbin"
+		VSCODIUM_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
 
-		AND_TOOLS="$HOME/Library/Android/sdk/platform-tools/"
-		AND_BUILD_TOOLS="$HOME/Library/Android/sdk/build-tools/31.0.0"
+		ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
+		ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/31.0.0"
 
 		# Mutt charset
 		export LC_ALL=es_ES.UTF-8
 
-		export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$CODE_PATH"
+		export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH"
 		;;
 esac
 
-DOTFILES_BIN="$HOME/.dotfiles/bin"
-
-export PATH="$PATH:$GOPATH:$GOPATH_BIN:$DOTFILES_BIN:$AND_TOOLS:$AND_BUILD_TOOLS"
+export PATH="$PATH:$GOPATH:$GOPATH_BIN:$DOTFILES_BIN:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS"
 
 fpath+=~/.zfunc
