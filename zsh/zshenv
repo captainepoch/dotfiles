@@ -26,7 +26,7 @@ case $(uname -s) in
 		VSCODIUM_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
 
 		ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-		ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/31.0.0"
+		ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/32.0.0"
 
 		# Mutt charset
 		export LC_ALL=es_ES.UTF-8
