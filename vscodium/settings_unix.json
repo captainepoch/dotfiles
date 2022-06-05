@@ -1,8 +1,15 @@
 {
+	// DiffEditor
+	"diffEditor.codeLens": false,
+	"diffEditor.renderSideBySide": true,
+	"diffEditor.ignoreTrimWhitespace": true,
+	"diffEditor.maxComputationTime": 0,
+	"diffEditor.renderIndicators": true,
 	// Editor
 	"editor.autoClosingBrackets": "always",
 	"editor.autoClosingDelete": "auto",
 	"editor.autoClosingOvertype": "auto",
+	"editor.bracketPairColorization.enabled": false,
 	"editor.comments.insertSpace": false,
 	"editor.detectIndentation": false,
 	"editor.insertSpaces": false,
@@ -11,6 +18,7 @@
 	"editor.fontSize": 13,
 	"editor.formatOnSave": true,
 	"editor.lineNumbers": "on",
+	"editor.matchBrackets": "always",
 	"editor.rulers": [
 		80,
 		100
@@ -53,6 +61,9 @@
 			}
 		]
 	},
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 80,
+	"extensions.ignoreRecommendations": true,
 	"files.encoding": "utf8",
 	"files.eol": "\n",
 	"files.insertFinalNewline": true,
@@ -60,9 +71,13 @@
 	"files.trimTrailingWhitespace": true,
 	"rewrap.autoWrap.enabled": true,
 	"window.restoreWindows": "none",
+	"window.title": "${rootPath}",
+	"workbench.colorTheme": "Default Light+",
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.enableExperiments": false,
+	"workbench.fontAliasing": "antialiased",
+	"workbench.layoutControl.enabled": false,
 	"workbench.localHistory.enabled": false,
 	"workbench.startupEditor": "none",
 	"workbench.settings.enableNaturalLanguageSearch": false,
@@ -71,6 +86,8 @@
 	"html.completion.attributeDefaultValue": "doublequotes",
 	"html.format.contentUnformatted": "pre",
 	"html.format.wrapAttributes": "force-aligned",
+	"html.suggest.html5": true,
+	"html.validate.scripts": true,
 	"html.validate.styles": true,
 	// Go
 	"go.autocompleteUnimportedPackages": true,
@@ -115,6 +132,11 @@
 		"editor.suggest.insertMode": "replace",
 		"editor.tabSize": 2
 	},
+	"[git-commit]": {
+		"editor.rulers": [
+			72
+		]
+	},
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features",
 		"editor.insertSpaces": false,
@@ -140,8 +162,7 @@
 	},
 	"[markdown]": {
 		"editor.formatOnSave": true,
-		"editor.quickSuggestions": false,
-		"editor.wordWrap": "off"
+		"editor.quickSuggestions": false
 	},
 	"[python]": {
 		"editor.formatOnSave": true,
