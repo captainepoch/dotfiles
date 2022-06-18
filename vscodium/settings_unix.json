@@ -69,6 +69,7 @@
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
+	"problems.defaultViewMode": "table",
 	"rewrap.autoWrap.enabled": true,
 	"window.restoreWindows": "none",
 	"window.title": "${rootPath}",
@@ -162,7 +163,11 @@
 	},
 	"[markdown]": {
 		"editor.formatOnSave": true,
-		"editor.quickSuggestions": false
+		"editor.quickSuggestions": {
+			"comments": "off",
+			"strings": "off",
+			"other": "off"
+		}
 	},
 	"[python]": {
 		"editor.formatOnSave": true,
