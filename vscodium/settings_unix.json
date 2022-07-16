@@ -73,7 +73,6 @@
 	"rewrap.autoWrap.enabled": true,
 	"window.restoreWindows": "none",
 	"window.title": "${rootPath}",
-	"workbench.colorTheme": "Default Light+",
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.enableExperiments": false,
