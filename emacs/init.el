@@ -19,14 +19,8 @@
 ;; Python hook
 (add-hook 'python-mode-hook (load "python.el"))
 
-;; Rust hook
-(add-hook 'rust-mode-hook (load "rust.el"))
-
 ;; Golang hook
 (add-hook 'go-mode-hook (load "go.el"))
-
-;; PHP hook
-(add-hook 'web-mode-hook (load "php.el"))
 
 ;; HTML hook
 (add-hook 'web-mode-hook (load "html.el"))

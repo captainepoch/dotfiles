@@ -28,10 +28,13 @@ case $(uname -s) in
 		ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 		ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/33.0.0"
 
+        EMACS="/Applications/Emacs.app/Contents/MacOS"
+        EMACSCLIENT="/Applications/Emacs.app/Contents/MacOS/bin"
+
 		# Mutt charset
 		export LC_ALL=es_ES.UTF-8
 
-		export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH"
+		export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$EMACS:$EMACSCLIENT"
 		;;
 esac
 
