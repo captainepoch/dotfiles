@@ -1,4 +1,5 @@
 {
+	include
 	// DiffEditor
 	"diffEditor.codeLens": false,
 	"diffEditor.renderSideBySide": true,
@@ -28,6 +29,58 @@
 	"editor.tabSize": 4,
 	"editor.trimAutoWhitespace": true,
 	"editor.tokenColorCustomizations": {
+		"[Default Light+]": {
+			"textMateRules": [
+				{
+					"scope": [
+						"keyword.control",
+						"source.cpp keyword.operator.new",
+						"source.cpp keyword.operator.delete",
+						"keyword.other.using",
+						"keyword.other.operator",
+						"entity.name.operator"
+					],
+					"settings": {
+						"foreground": "#660E7A"
+					}
+				},
+				{
+					"scope": "constant.language",
+					"settings": {
+						"foreground": "#000080"
+					}
+				},
+				{
+					"scope": "storage",
+					"settings": {
+						"foreground": "#00ff62"
+					}
+				},
+				{
+					"scope": "storage.type",
+					"settings": {
+						"foreground": "#000080"
+					}
+				},
+				{
+					"scope": [
+						"keyword.operator.new",
+						"keyword.operator.expression",
+						"keyword.operator.cast",
+						"keyword.operator.sizeof",
+						"keyword.operator.alignof",
+						"keyword.operator.typeid",
+						"keyword.operator.alignas",
+						"keyword.operator.instanceof",
+						"keyword.operator.logical.python",
+						"keyword.operator.wordlike"
+					],
+					"settings": {
+						"foreground": "#000080"
+					}
+				}
+			]
+		},
 		"textMateRules": [
 			{
 				"scope": "keyword",
@@ -177,5 +230,6 @@
 		"editor.autoIndent": "advanced",
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
-	}
+	},
+	"workbench.colorTheme": "Default Light+"
 }
