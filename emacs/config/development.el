@@ -90,14 +90,41 @@
   :ensure t
   :demand t
   :config
-  (progn
+  ;;(progn
+    :commands (company-complete-common
+             company-complete-common-or-cycle
+             company-manual-begin
+             company-grab-line)
+  :init
 	(setq
 	 company-tooltip-limit 20
 	 company-idle-delay 0.3
 	 company-echo-delay 0
 	 company-show-numbers t
-	 company-tooltip-align-annotations t)
-	(global-company-mode))
+	 company-tooltip-align-annotations t
+   company-global-modes
+    '(not erc-mode
+      circe-mode
+      message-mode
+      help-mode
+      gud-mode
+      vterm-mode)
+	 ;; These auto-complete the current selection when
+   ;; `company-auto-commit-chars' is typed. This is too magical. We
+   ;; already have the much more explicit RET and TAB.
+   company-auto-commit nil
+	 company-frontends
+     '(company-pseudo-tooltip-frontend  ; always show candidates in overlay tooltip
+       company-echo-metadata-frontend)  ; show selected candidate docs in echo area
+        ;; Only search the current buffer for `company-dabbrev' (a backend that
+        ;; suggests text your open buffers). This prevents Company from causing
+        ;; lag once you have a lot of buffers open.
+        company-dabbrev-other-buffers nil
+        ;; Make `company-dabbrev' fully case-sensitive, to improve UX with
+        ;; domain-specific words with particular casing.
+        company-dabbrev-ignore-case nil
+        company-dabbrev-downcase nil)
+	(global-company-mode);;)
   :bind (("<C-tab>" . company-complete)))
 
 ;; company-quickhelp - documentation popup for company

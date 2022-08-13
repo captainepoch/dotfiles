@@ -29,6 +29,7 @@
 ;; jedi - Python auto-completion for Emacs
 ;; company-jedi - company backend for Python's jedi
 (use-package jedi
+  :after python
   :ensure t
   :init
   (add-to-list 'company-backends 'company-jedi)
@@ -41,8 +42,10 @@
 
 ;; virtualenvwrapper - virtualenvs within emacs
 (use-package virtualenvwrapper
+  :after python
   :ensure t
   :config
   (venv-initialize-interactive-shells)
   (venv-initialize-eshell)
-  (setq venv-location "~/Projects/PyVenv"))
+  (setq venv-location '("~/Projects/PyVenv"
+                        "~/.pyenv/versions")))

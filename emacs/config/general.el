@@ -128,7 +128,9 @@
 (use-package undo-tree
   :ensure t
   :init
-  (global-undo-tree-mode 1))
+  (global-undo-tree-mode 1)
+  :config
+  (setq undo-tree-auto-save-history nil))
 
 ;; unkillable-scratch - make the *scratch* buffer unkillable
 (use-package unkillable-scratch

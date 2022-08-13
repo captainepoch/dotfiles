@@ -19,6 +19,10 @@
 (add-to-list 'default-frame-alist '(width . 135))
 (set-frame-position (selected-frame) 1 1)
 
+;; Set right META key as an ALT
+(setq mac-option-key-is-meta t)
+(setq mac-right-option-modifier nil)
+
 ;; Color scheme
 ;;(use-package doom-themes
 ;;  :ensure t
