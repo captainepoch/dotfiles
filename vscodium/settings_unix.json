@@ -133,7 +133,7 @@
 	"workbench.layoutControl.enabled": false,
 	"workbench.localHistory.enabled": false,
 	"workbench.preferredDarkColorTheme": "Default Dark+",
-	"workbench.preferredLightColorTheme":"Default Light+",
+	"workbench.preferredLightColorTheme": "Default Light+",
 	"workbench.startupEditor": "none",
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	// HTML
