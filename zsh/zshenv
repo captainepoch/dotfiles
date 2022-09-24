@@ -7,24 +7,24 @@ export GOPATH_BIN="$GOPATH/bin"
 case $(uname -s) in
 	"Linux")
 		export JAVA_HOME="/usr/lib/jvm/default"
-		export ANDROID_HOME=""
 
+		export ANDROID_HOME=""
 		# TODO
 		ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-		# TODO
 		ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/31.0.0"
+
 		CORE_PERL="/usr/bin/core_perl"
 
 		export PATH="$PATH:$CORE_PERL"
 		;;
 	"Darwin")
 		export JAVA_HOME=$(/usr/libexec/java_home)
-		export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 		LATEX_PATH="/Library/TeX/texbin"
 		SBIN_PATH="/usr/local/sbin"
 		VSCODIUM_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
 
+		export ANDROID_HOME="$HOME/Library/Android/sdk"
 		ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 		ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/33.0.0"
 
