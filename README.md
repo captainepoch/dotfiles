@@ -1,5 +1,7 @@
 # dotfiles
-Config files' backup.
+
+Yet another dotfiles repository.
 
 # LICENSE
+
 [MIT](./COPYING).
