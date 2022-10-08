@@ -16,7 +16,7 @@
 	"editor.fontFamily": "Liberation Mono",
 	"editor.fontLigatures": false,
 	"editor.fontSize": 13,
-	"editor.formatOnSave": true,
+	"editor.formatOnSave": false,
 	"editor.lineNumbers": "on",
 	"editor.matchBrackets": "always",
 	"editor.rulers": [
@@ -179,6 +179,7 @@
 	"npm.fetchOnlinePackageInfo": false,
 	"security.workspace.trust.enabled": false,
 	"security.workspace.trust.untrustedFiles": "open",
+	"terminal.integrated.enableBell": false,
 	"telemetry.telemetryLevel": "off",
 	"update.mode": "none",
 	// Formaters
