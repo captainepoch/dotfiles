@@ -11,7 +11,7 @@
 	"editor.autoClosingOvertype": "auto",
 	"editor.bracketPairColorization.enabled": false,
 	"editor.comments.insertSpace": false,
-	"editor.detectIndentation": false,
+	"editor.detectIndentation": true,
 	"editor.insertSpaces": false,
 	"editor.fontFamily": "Liberation Mono",
 	"editor.fontLigatures": false,
@@ -186,21 +186,23 @@
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.suggest.insertMode": "replace",
+		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
 	"[git-commit]": {
 		"editor.rulers": [
+			50,
 			72
 		]
 	},
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features",
-		"editor.insertSpaces": false,
+		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features",
-		"editor.insertSpaces": false,
+		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
 	"[jinja-html]": {
@@ -208,12 +210,12 @@
 	},
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features",
-		"editor.insertSpaces": false,
+		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features",
-		"editor.insertSpaces": false,
+		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
 	"[markdown]": {
