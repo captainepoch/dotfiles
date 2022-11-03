@@ -31,10 +31,14 @@ case $(uname -s) in
         EMACS="/Applications/Emacs.app/Contents/MacOS"
         EMACSCLIENT="/Applications/Emacs.app/Contents/MacOS/bin"
 
+		PYTHON_BIN="$HOME/Library/Python/3.10/bin"
+
+		LOCAL_BIN="$HOME/.local/bin"
+
 		# Mutt charset
 		export LC_ALL=es_ES.UTF-8
 
-		export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$EMACS:$EMACSCLIENT"
+		export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$EMACS:$EMACSCLIENT:$PYTHON_BIN:$LOCAL_BIN"
 		;;
 esac
 

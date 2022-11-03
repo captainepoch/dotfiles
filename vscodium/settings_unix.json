@@ -166,7 +166,7 @@
 	"python.linting.pylintEnabled": false,
 	"python.venvFolders": [
 		"~/Projects/PyVenv",
-		"~/.pyenv/versions"
+		"~/.local/share/virtualenvs"
 	],
 	"python.venvPath": "${workspaceFolderBasename}",
 	// C(++)
