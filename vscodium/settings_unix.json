@@ -206,6 +206,7 @@
 		"editor.tabSize": 2
 	},
 	"[jinja-html]": {
+		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
 	"[json]": {
