@@ -5,41 +5,41 @@ export GOPATH="$HOME/Projects/go"
 export GOPATH_BIN="$GOPATH/bin"
 
 case $(uname -s) in
-	"Linux")
-		export JAVA_HOME="/usr/lib/jvm/default"
+"Linux")
+	export JAVA_HOME="/usr/lib/jvm/default"
 
-		export ANDROID_HOME=""
-		# TODO
-		ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-		ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/31.0.0"
+	export ANDROID_HOME=""
+	# TODO
+	ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
+	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/31.0.0"
 
-		CORE_PERL="/usr/bin/core_perl"
+	CORE_PERL="/usr/bin/core_perl"
 
-		export PATH="$PATH:$CORE_PERL"
-		;;
-	"Darwin")
-		export JAVA_HOME=$(/usr/libexec/java_home)
+	export PATH="$PATH:$CORE_PERL"
+	;;
+"Darwin")
+	export JAVA_HOME=$(/usr/libexec/java_home)
 
-		LATEX_PATH="/Library/TeX/texbin"
-		SBIN_PATH="/usr/local/sbin"
-		VSCODIUM_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
+	LATEX_PATH="/Library/TeX/texbin"
+	SBIN_PATH="/usr/local/sbin"
+	VSCODIUM_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
 
-		export ANDROID_HOME="$HOME/Library/Android/sdk"
-		ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-		ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/33.0.0"
+	export ANDROID_HOME="$HOME/Library/Android/sdk"
+	ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
+	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/33.0.0"
 
-        EMACS="/Applications/Emacs.app/Contents/MacOS"
-        EMACSCLIENT="/Applications/Emacs.app/Contents/MacOS/bin"
+	EMACS="/Applications/Emacs.app/Contents/MacOS"
+	EMACSCLIENT="/Applications/Emacs.app/Contents/MacOS/bin"
 
-		PYTHON_BIN="$HOME/Library/Python/3.10/bin"
+	PYTHON_BIN="$HOME/Library/Python/3.10/bin"
 
-		LOCAL_BIN="$HOME/.local/bin"
+	LOCAL_BIN="$HOME/.local/bin"
 
-		# Mutt charset
-		export LC_ALL=es_ES.UTF-8
+	# Mutt charset
+	export LC_ALL=es_ES.UTF-8
 
-		export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$EMACS:$EMACSCLIENT:$PYTHON_BIN:$LOCAL_BIN"
-		;;
+	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$EMACS:$EMACSCLIENT:$PYTHON_BIN:$LOCAL_BIN"
+	;;
 esac
 
 export PATH="$PATH:$GOPATH:$GOPATH_BIN:$DOTFILES_BIN:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS"
