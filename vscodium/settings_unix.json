@@ -115,6 +115,7 @@
 	},
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.wordWrapColumn": 80,
+	"extensions.autoUpdate": false,
 	"extensions.ignoreRecommendations": true,
 	"files.encoding": "utf8",
 	"files.eol": "\n",
