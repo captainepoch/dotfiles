@@ -130,7 +130,6 @@
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.enableExperiments": false,
-	"workbench.fontAliasing": "antialiased",
 	"workbench.layoutControl.enabled": false,
 	"workbench.localHistory.enabled": false,
 	"workbench.preferredDarkColorTheme": "Default Dark+",
