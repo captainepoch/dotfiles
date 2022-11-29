@@ -118,11 +118,11 @@
   :bind (([f8] . neotree-toggle))
   :config
   (setq-default neo-smart-open t)
-  (setq neo-force-change-root t)
-  (setq neo-window-fixed-size nil))
-;;(add-hook 'server-switch-hook (lambda () (call-interactively 'neotree-show)))
-(add-hook 'neo-after-create-hook
-		  (lambda (&rest _) (display-line-numbers-mode -1)))
+  (setq neo-force-change-root t
+        neo-window-fixed-size nil
+        neo-banner-message nil)
+  (add-hook 'neo-after-create-hook
+    (lambda (&rest _) (display-line-numbers-mode -1))))
 
 ;; rich-minority - less minor-modes on the modeline
 (use-package rich-minority
