@@ -15,7 +15,6 @@
 	(interactive)
 	(ispell-change-dictionary "english"))
 
-  ;; :hook (org-mode . (lambda () (setq ispell-parser 'tex)))
   :bind (:map flyspell-mode-map
 			  ("C-c d s" . change-dictionary-spanish)
 			  ("C-c d e" . change-dictionary-english)))
@@ -40,6 +39,6 @@
 			  (flyspell-mode t)))
   (setq-default word-wrap t)
   :config
-  (setq-default fill-column 72)
+  (setq-default fill-column 80)
   (add-hook 'text-mode-hook 'turn-on-auto-fill)
   (setq-default auto-fill-function 'do-auto-fill))

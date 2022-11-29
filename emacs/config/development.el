@@ -21,18 +21,6 @@
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
-;; neotree - show a directory tree with autoupdate
-(use-package neotree
-  :ensure t
-  :bind (([f8] . neotree-toggle))
-  :config
-  (setq-default neo-smart-open t)
-  (setq neo-force-change-root t)
-  (setq neo-window-fixed-size nil))
-;;(add-hook 'server-switch-hook (lambda () (call-interactively 'neotree-show)))
-(add-hook 'neo-after-create-hook
-		  (lambda (&rest _) (display-line-numbers-mode -1)))
-
 ;; projectile - project interaction library
 (use-package projectile
   :ensure t
@@ -132,7 +120,7 @@
   :ensure t
   :diminish company-mode
   :init
-  (add-hook 'global-company-mode-hook #'company-quickhelp-mode)
+    (add-hook 'global-company-mode-hook #'company-quickhelp-mode)
   :config (company-quickhelp-mode)
   :bind ("C-c h" . #'company-quickhelp-manual-begin))
 
@@ -142,3 +130,10 @@
   :bind
   ("C-a" . mwim-beginning-of-code-or-line)
   ("C-e" . mwim-end-of-code-or-line))
+
+;; indent-guide - indent block
+(use-package indent-guide
+  :ensure t
+  :init
+    (add-hook 'yaml-mode-hook 'indent-guide-mode)
+    (add-hook 'python-mode-hook 'indent-guide-mode))

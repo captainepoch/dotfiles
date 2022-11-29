@@ -23,19 +23,7 @@
 (setq mac-option-key-is-meta t)
 (setq mac-right-option-modifier nil)
 
-;; Color scheme
-;;(use-package doom-themes
-;;  :ensure t
-;;  :config
-;;  ;; Enable custom neotree theme (all-the-icons must be installed!)
-;;  (doom-themes-neotree-config)
-;;  ;; or for treemacs users
-;;  (doom-themes-treemacs-config)
-;;  ;; Corrects (and improves) org-mode's native fontification.
-;;  (doom-themes-org-config)
-;;  )
-;;(load-theme 'doom-one t)
-
+;; Color scheme (spacemacs-dark)
 (use-package spacemacs-theme
   :ensure t
   :defer t
@@ -99,7 +87,7 @@
 (setq show-trailing-whitespace 1)
 
 ;; 79 character line width
-(setq-default fill-column 79)
+(setq-default fill-column 80)
 
 ;; Show column number in modeline
 (column-number-mode t)
@@ -123,6 +111,18 @@
 					;; Show line and column position
 					mode-line-position
 					))
+
+;; neotree - show a directory tree with autoupdate
+(use-package neotree
+  :ensure t
+  :bind (([f8] . neotree-toggle))
+  :config
+  (setq-default neo-smart-open t)
+  (setq neo-force-change-root t)
+  (setq neo-window-fixed-size nil))
+;;(add-hook 'server-switch-hook (lambda () (call-interactively 'neotree-show)))
+(add-hook 'neo-after-create-hook
+		  (lambda (&rest _) (display-line-numbers-mode -1)))
 
 ;; rich-minority - less minor-modes on the modeline
 (use-package rich-minority
