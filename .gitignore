@@ -1,9 +1,6 @@
 # Emacs
 !emacs
 emacs/*
-!emacs/snippets
 !emacs/config
 !emacs/init.el
 !emacs/mutt.el
-emacs/custom.el
-!emacs/ido.last
