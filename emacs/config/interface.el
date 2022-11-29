@@ -86,7 +86,7 @@
 ;; Show unncessary whitespace that can mess up your diff
 (setq show-trailing-whitespace 1)
 
-;; 79 character line width
+;; 80 character line width
 (setq-default fill-column 80)
 
 ;; Show column number in modeline
