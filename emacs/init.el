@@ -4,6 +4,10 @@
 ;; Packages loader
 (load "packages.el")
 
+;; Set Custom file
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(load custom-file 'noerror)
+
 ;; General config
 (load "general.el")
 
@@ -30,10 +34,6 @@
 
 ;; Text hook
 (add-hook 'text-mode-hook (load "text.el"))
-
-;; Set Custom file
-(setq custom-file (concat user-emacs-directory "custom.el"))
-(load custom-file 'noerror)
 
 ;; Load user info
 (load "user.el")

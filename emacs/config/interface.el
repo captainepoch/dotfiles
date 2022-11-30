@@ -24,11 +24,18 @@
 (setq mac-right-option-modifier nil)
 
 ;; Color scheme (spacemacs-dark)
-(use-package spacemacs-theme
+;;(use-package spacemacs-theme
+;;  :ensure t
+;;  :defer t
+;;  :init
+;;  (load-theme 'spacemacs-dark t))
+
+;; Color scheme (tango-plus)
+(use-package tango-plus-theme
   :ensure t
   :defer t
   :init
-  (load-theme 'spacemacs-dark t))
+    (load-theme 'dichromacy))
 
 ;; Dark window border on OS X
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
@@ -67,7 +74,7 @@
 ;; Nice scrolling
 (setq
  scroll-margin 0
- scroll-conservatively 100000
+ scroll-conservatively 101
  scroll-preserve-screen-position 1
  mouse-wheel-progressive-speed nil)
 
