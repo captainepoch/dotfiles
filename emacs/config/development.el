@@ -32,8 +32,8 @@
 ;; eldoc - shows the argument list of the function call
 (use-package eldoc
   :ensure t
-  ;;:diminish eldoc-mode
-  :config (global-eldoc-mode))
+  :demand t
+  :hook (prog-mode . eldoc-mode))
 
 ;; yasnippet - template system
 (use-package yasnippet
