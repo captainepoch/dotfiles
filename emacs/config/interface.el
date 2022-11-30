@@ -14,6 +14,9 @@
 ;; Non blinking cursor
 (blink-cursor-mode 0)
 
+;; Not stretching the cursor
+(setq x-stretch-cursor nil)
+
 ;; Width, height and osition
 (add-to-list 'default-frame-alist '(height . 52))
 (add-to-list 'default-frame-alist '(width . 135))
@@ -71,12 +74,22 @@
    (set-face-attribute face nil :weight 'normal :underline nil))
  (face-list))
 
-;; Nice scrolling
-(setq
- scroll-margin 0
- scroll-conservatively 101
- scroll-preserve-screen-position 1
- mouse-wheel-progressive-speed nil)
+;; Nice scrolling (taken from doom-emacs)
+(setq hscroll-margin 2
+      hscroll-step 1
+      scroll-conservatively 101
+      scroll-margin 0
+      scroll-preserve-screen-position t
+      ;; Reduce cursor lag by a tiny bit by not auto-adjusting `window-vscroll'
+      ;; for tall lines.
+      auto-window-vscroll nil
+      ;; Mouse
+      mouse-wheel-scroll-amount '(1 ((shift) . hscroll))
+      mouse-wheel-scroll-amount-horizontal 1
+      mouse-wheel-progressive-speed nil
+      ;; Trackpad/Mousepad
+      mac-redisplay-dont-reset-vscroll t
+      mac-mouse-wheel-smooth-scroll nil)
 
 ;; List of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
