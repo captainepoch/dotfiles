@@ -27,7 +27,7 @@
 ;; Delete white space at line ending
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; Set TABS insead of spaces (yeah, that's right, tabs!)
+;; Set tabs insead of spaces
 (setq-default
  indent-tabs-mode t
  tab-width 4
@@ -57,7 +57,7 @@
  use-dialog-box nil
  visible-bell t)
 
-;; Show matching parens... but don't make me wait for it
+;; Show matching parens
 (show-paren-mode t)
 (setq-default show-paren-delay 0)
 
@@ -74,7 +74,7 @@
 ;; Update buffer when file changes
 (global-auto-revert-mode t)
 
-;; Smart auto-indent... disable indenting previous line (WHY?!)
+;; Smart auto-indent... disable indenting previous line
 (electric-indent-mode 1)
 (setq-default electric-indent-inhibit t)
 
