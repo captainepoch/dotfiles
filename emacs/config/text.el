@@ -1,19 +1,26 @@
 ;; flyspell - natural lang. spell checking
 (use-package flyspell
   :ensure t
+  :defer t
   :config
-  (setq ispell-program-name "aspell"
-		ispell-dictionary "english")
+  (setq flyspell-issue-welcome-flag nil)
+  (setq flyspell-issue-message-flag nil)
+  (setq flyspell-mark-duplications-flag nil)
+  (setq-default ispell-program-name "aspell")
+  (setq-default ispell-list-command "list")
+	(setq ispell-dictionary "en")
   (set-face-underline 'flyspell-incorrect
 					  '(:color "#dc322f" :style line))
 
   (defun change-dictionary-spanish ()
 	(interactive)
-	(ispell-change-dictionary "espanol"))
+	(ispell-change-dictionary "es")
+  (flyspell-buffer))
 
   (defun change-dictionary-english ()
 	(interactive)
-	(ispell-change-dictionary "english"))
+	(ispell-change-dictionary "en")
+  (flyspell-buffer))
 
   :bind (:map flyspell-mode-map
 			  ("C-c d s" . change-dictionary-spanish)
