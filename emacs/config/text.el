@@ -28,7 +28,14 @@
 
 ;; writegood-mode - improve english writing
 (use-package writegood-mode
-  :ensure t)
+  :ensure t
+  :defer t
+  :init
+  :hook (writegood-mode . mail-mode)
+  :bind (
+    ("C-c C-g g" . writegood-grade-level)
+    ("C-c C-g e" . writegood-reading-ease)
+  ))
 
 ;; markdown-mode - minor mode for markdown
 (use-package markdown-mode
