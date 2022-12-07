@@ -3,12 +3,12 @@
   :ensure t
   :defer t
   :config
-  (setq flyspell-issue-welcome-flag nil)
-  (setq flyspell-issue-message-flag nil)
-  (setq flyspell-mark-duplications-flag nil)
+  (setq flyspell-issue-welcome-flag nil
+        flyspell-issue-message-flag nil
+        flyspell-mark-duplications-flag nil
+	      ispell-dictionary "en")
   (setq-default ispell-program-name "aspell")
   (setq-default ispell-list-command "list")
-	(setq ispell-dictionary "en")
   (set-face-underline 'flyspell-incorrect
 					  '(:color "#dc322f" :style line))
 
