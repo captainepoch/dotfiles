@@ -27,7 +27,7 @@
 (add-hook 'go-mode-hook (load "go.el"))
 
 ;; HTML hook
-;;(add-hook 'web-mode-hook (load "html.el"))
+(add-hook 'web-mode-hook (load "html.el"))
 
 ;; YAML hook
 (add-hook 'yaml-mode-hook (load "yaml.el"))
