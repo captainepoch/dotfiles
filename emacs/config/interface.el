@@ -26,14 +26,7 @@
 (setq mac-option-key-is-meta t)
 (setq mac-right-option-modifier nil)
 
-;; Color scheme (spacemacs-dark)
-;;(use-package spacemacs-theme
-;;  :ensure t
-;;  :defer t
-;;  :init
-;;  (load-theme 'spacemacs-dark t))
-
-;; Color scheme (tango-plus)
+;; Color scheme
 (use-package tango-plus-theme
   :ensure t
   :defer t
