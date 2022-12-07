@@ -34,8 +34,7 @@
   :hook (writegood-mode . mail-mode)
   :bind (
     ("C-c C-g g" . writegood-grade-level)
-    ("C-c C-g e" . writegood-reading-ease)
-  ))
+    ("C-c C-g e" . writegood-reading-ease)))
 
 ;; markdown-mode - minor mode for markdown
 (use-package markdown-mode
