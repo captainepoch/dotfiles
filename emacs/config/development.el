@@ -51,7 +51,8 @@
   (setq magit-section-initial-visibility-alist '((unpushed . show)))
   (git-commit-turn-on-auto-fill)
   (add-hook 'git-commit-mode-hook (lambda () (setq-local fill-column 72)))
-  :bind (("C-x g" . magit-status)))
+  :bind (("C-x g" . magit-status))
+  :custom (git-commit-summary-max-length 50))
 
 ;; git-gutter - shows git diff in the gutter
 (use-package git-gutter
