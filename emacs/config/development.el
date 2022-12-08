@@ -153,12 +153,3 @@
 (use-package rainbow-delimiters
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
-
-;; yasnippet - template system
-(use-package yasnippet
-  :ensure t
-  :diminish 'yas-minor-mode
-  :demand t
-  :config
-  (add-to-list 'yas-snippet-dirs (concat user-emacs-directory "snippets"))
-  (yas-global-mode 1))

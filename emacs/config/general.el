@@ -93,23 +93,6 @@
       apropos-do-all t
       mouse-yank-at-point t)
 
-;; uniquify - better disambiguation for same-named files
-(use-package uniquify
-  :config
-  (setq uniquify-buffer-name-style 'forward)
-  (setq uniquify-separator "/")
-  ;; Rename after killing uniquified
-  (setq uniquify-after-kill-buffer-p t)
-  ;; Don't muck with special buffers
-  (setq uniquify-ignore-buffers-re "^\\*"))
-
-;; which-key - displays available keybindings in popup
-(use-package which-key
-  :ensure t
-  :config
-  (setq which-key-idle-delay 0.5)
-  (which-key-mode +1))
-
 ;; hl-todo - highlights todos
 (use-package hl-todo
   :ensure t
@@ -124,19 +107,6 @@
 ;;   (add-hook 'prog-mode-hook #'smartparens-mode)
 ;;   (sp-pair "{" nil :post-handlers '(("||\n[i]" "RET"))))
 
-;; undo-tree - a undo tree
-(use-package undo-tree
-  :ensure t
-  :init
-  (global-undo-tree-mode 1)
-  :config
-  (setq undo-tree-auto-save-history nil))
-
-;; unkillable-scratch - make the *scratch* buffer unkillable
-(use-package unkillable-scratch
-  :ensure t
-  :init (unkillable-scratch))
-
 ;; syntax-subgord - fine-grained text operations
 ;; used to kill like vim/sublime/vscodium
 (use-package syntax-subword
@@ -146,3 +116,41 @@
   (setq syntax-subword-skip-spaces t)
   :config
   (global-syntax-subword-mode))
+
+;; undo-tree - a undo tree
+(use-package undo-tree
+  :ensure t
+  :init
+  (global-undo-tree-mode 1)
+  :config
+  (setq undo-tree-auto-save-history nil))
+
+;; uniquify - better disambiguation for same-named files
+(use-package uniquify
+  :config
+  (setq uniquify-buffer-name-style 'forward)
+  (setq uniquify-separator "/")
+  ;; Rename after killing uniquified
+  (setq uniquify-after-kill-buffer-p t)
+  ;; Don't muck with special buffers
+  (setq uniquify-ignore-buffers-re "^\\*"))
+
+;; unkillable-scratch - make the *scratch* buffer unkillable
+(use-package unkillable-scratch
+  :ensure t
+  :init (unkillable-scratch))
+
+;; which-key - displays available keybindings in popup
+(use-package which-key
+  :ensure t
+  :config
+  (setq which-key-idle-delay 0.5)
+  (which-key-mode +1))
+
+;; yasnippet - template system
+(use-package yasnippet
+  :ensure t
+  :demand t
+  :config
+  (add-to-list 'yas-snippet-dirs (concat user-emacs-directory "snippets"))
+  (yas-global-mode 1))
