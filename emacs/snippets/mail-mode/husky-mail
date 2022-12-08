@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: HuskyEmail
 # key: husky-mail
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
 # --
 
 Hello there!
@@ -15,7 +16,7 @@ and a more detailed log looking at the tag[tag].
 
 Quick changelog:
 
-$2
+  - $2
 
 Please report any bugs by sending an email to the devel mailist[husky-devel].
 You may ask for features in the same mailist.
