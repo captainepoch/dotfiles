@@ -1,7 +1,7 @@
 ;; Packages to install with pip(2):
 ;; jedi flake8 pep8 importmagic autopep8 yapf nose
 
-;; python-mode - python-mode for emacs
+;; python-mode - python-mode for Emacs
 (use-package python-mode
   :ensure t)
 
@@ -40,7 +40,7 @@
 	(add-hook 'python-mode-hook (lambda () (add-to-list 'company-backends 'company-jedi)))
 	(setq company-jedi-python-bin "python")))
 
-;; virtualenvwrapper - virtualenvs within emacs
+;; virtualenvwrapper - virtualenvs within Emacs
 (use-package virtualenvwrapper
   :after python
   :ensure t

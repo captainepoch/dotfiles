@@ -41,7 +41,7 @@
 ;; Load user info
 (load "user.el")
 
-;; Load emacs server
+;; Load Emacs server
 (load "server")
 (unless (server-running-p)
   (server-start))

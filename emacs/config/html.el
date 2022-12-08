@@ -44,7 +44,7 @@
     :ensure t
     :hook (less-css-mode . skewer-less-mode)))
 
-;; skewer-mode - live web development in emacs
+;; skewer-mode - live web development in Emacs
 (use-package skewer-mode
   :ensure t
   :after css-mode

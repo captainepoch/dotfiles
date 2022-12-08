@@ -33,7 +33,7 @@
  tab-width 4
  standard-indent tab-width)
 
-;; Open all files in the same emacs window
+;; Open all files in the same Emacs window
 (setq-default ns-pop-up-frames nil)
 
 ;; Keep all windows in one frame
@@ -87,7 +87,7 @@
 ;; Misc. key bindings
 (global-set-key (kbd "RET") 'newline-and-indent)
 
-;; Allow clipboard from outside emacs
+;; Allow clipboard from outside Emacs
 (setq select-enable-clipboard t
       save-interprogram-paste-before-kill t
       apropos-do-all t

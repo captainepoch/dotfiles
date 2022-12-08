@@ -17,7 +17,7 @@
 ;; Not stretching the cursor
 (setq x-stretch-cursor nil)
 
-;; Width, height and osition
+;; Width, height and position
 (add-to-list 'default-frame-alist '(height . 52))
 (add-to-list 'default-frame-alist '(width . 135))
 (set-frame-position (selected-frame) 1 1)
@@ -60,8 +60,8 @@
 	(add-to-list 'default-frame-alist '(font . "Liberation Mono-10"))
   (set-face-attribute 'default t :font "Liberation Mono-10"))
 (if (eq system-type 'darwin)
-	(add-to-list 'default-frame-alist '(font . "Liberation Mono-11"))
-  (set-face-attribute 'default t :font "Liberation Mono-11"))
+	(add-to-list 'default-frame-alist '(font . "Liberation Mono-12"))
+  (set-face-attribute 'default t :font "Liberation Mono-12"))
 (mapc
  (lambda (face)
    (set-face-attribute face nil :weight 'normal :underline nil))

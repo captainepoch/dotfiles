@@ -124,7 +124,7 @@
   :config
   (setq lsp-ui-doc-enable t))
 
-;; magit - git interface for emacs
+;; magit - git interface for Emacs
 (use-package magit
   :ensure t
   :config

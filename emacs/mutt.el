@@ -1,4 +1,4 @@
-;; Load some defaults for emacs
+;; Load some defaults for Emacs
 (add-to-list 'load-path (concat user-emacs-directory "config"))
 (load "packages.el")
 (load "interface.el")
