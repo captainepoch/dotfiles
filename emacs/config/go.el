@@ -3,14 +3,16 @@
   :ensure t
   :defer t
   :mode (("\\.go" . go-mode))
+  :hook (
+		 (before-save . gofmt-before-save)
+		 (go-mode . setup-go-mode-compile)
+		 (go-mode . flycheck-mode)
+		 (go-mode . (lambda ()
+					  (set (make-local-variable 'company-backends) '(company-go))
+					  (company-mode)))
+		 )
   :config
-  (setq gofmt-command "goimports")
-  (add-hook 'before-save-hook 'gofmt-before-save)
-  (add-hook 'go-mode-hook 'setup-go-mode-compile)
-  (add-hook 'go-mode-hook 'flycheck-mode)
-  (add-hook 'go-mode-hook (lambda ()
-							(set (make-local-variable 'company-backends) '(company-go))
-							(company-mode))))
+  (setq gofmt-command "goimports"))
 
 ;; company-go - company support for Golang
 ;; (go get -u github.com/nsf/gocode)
@@ -32,8 +34,7 @@
 (use-package go-eldoc
   :ensure t
   :diminish eldoc-mode
-  :config
-  (add-hook 'go-mode-hook 'go-eldoc-setup))
+  :hook (go-mode . go-eldoc-setup))
 
 (defun setup-go-mode-compile ()
   ;; Customize compile command to run go build

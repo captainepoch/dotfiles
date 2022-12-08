@@ -14,23 +14,26 @@
 ;; Emacs look
 (load "interface.el")
 
-;; Enable dev. config
+;; Enable development config
 (add-hook 'prog-mode-hook (load "development.el"))
 
-;; C(++) hook
+;; C(++) config
 (add-hook 'c-mode-hook (load "c.el"))
 
-;; Python hook
+;; Python config
 (add-hook 'python-mode-hook (load "python.el"))
 
-;; Golang hook
+;; Go config
 (add-hook 'go-mode-hook (load "go.el"))
 
-;; HTML hook
+;; Web config
 (add-hook 'web-mode-hook (load "html.el"))
 
-;; YAML hook
+;; YAML config
 (add-hook 'yaml-mode-hook (load "yaml.el"))
+
+;; Elisp config
+(add-hook 'emacs-lisp-mode (load "elisp.el"))
 
 ;; Text hook
 (add-hook 'text-mode-hook (load "text.el"))
@@ -41,8 +44,7 @@
 ;; Load emacs server
 (load "server")
 (unless (server-running-p)
-  (server-start)
-  )
+  (server-start))
 
 ;; End message - OK!
 (message "Hack The Planet!")
