@@ -1,3 +1,8 @@
+;; Go tools
+;;  go install github.com/dougm/goflymake@latest
+;;  go install golang.org/x/tools/cmd/goimports@latest
+;;  go install golang.org/x/tools/gopls@latest
+
 ;; go-mode - enable Golang mode
 (use-package go-mode
   :ensure t
@@ -9,13 +14,11 @@
 		 (go-mode . flycheck-mode)
 		 (go-mode . (lambda ()
 					  (set (make-local-variable 'company-backends) '(company-go))
-					  (company-mode)))
-		 )
+					  (company-mode))))
   :config
   (setq gofmt-command "goimports"))
 
 ;; company-go - company support for Golang
-;; (go get -u github.com/nsf/gocode)
 (use-package company-go
   :ensure t
   :after go-mode
@@ -25,12 +28,12 @@
   :bind (:map go-mode-map
 			  ("M-." . godef-jump)))
 
+;; flymake-go - flymake handler for go-mode files
 (use-package flymake-go
   :ensure t
   :after go-mode)
 
 ;; go-eldoc - eldoc support for Golang
-;; (go get -u github.com/nsf/gocode)
 (use-package go-eldoc
   :ensure t
   :diminish eldoc-mode

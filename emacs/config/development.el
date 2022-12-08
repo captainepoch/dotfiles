@@ -100,14 +100,29 @@
   (add-hook 'yaml-mode-hook 'indent-guide-mode)
   (add-hook 'python-mode-hook 'indent-guide-mode))
 
+;; lsp-mode - client/library for the Language Server Protocol
 (use-package lsp-mode
+  :ensure t
+  :defer t
   :commands (lsp lsp-deferred)
   :init
   (setq lsp-keymap-prefix "C-c l")
   :config
   (lsp-enable-which-key-integration t)
-  :hook
-  ((go-mode) . lsp))
+  ;; Set the gc threshold to 100MB
+  (setq gc-cons-threshold 100000000)
+  ;; Increase the amount of data Emacs reads from a process
+  (setq read-process-output-max (* 1024 1024))
+  :hook (
+		 (go-mode) . lsp))
+
+;; lsp-ui - useful UI integrations for lsp-mode
+(use-package lsp-ui
+  :ensure t
+  :defer t
+  :hook (lsp-mode . lsp-ui-mode)
+  :config
+  (setq lsp-ui-doc-enable t))
 
 ;; magit - git interface for emacs
 (use-package magit
