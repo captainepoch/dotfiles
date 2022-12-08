@@ -151,6 +151,9 @@
 (use-package yasnippet
   :ensure t
   :demand t
+  :hook (
+    (after-init . yas-global-mode)
+    (mail-mode . yas-minor-mode))
   :config
   (add-to-list 'yas-snippet-dirs (concat user-emacs-directory "snippets"))
-  (yas-global-mode 1))
+  (yas-reload-all))

@@ -3,4 +3,35 @@
 # key: husky-mail
 # --
 
-> **Fixme** work in progress
+Hello there!
+
+I tagged the version ${1:RELEASE_TAG} for Husky.
+
+You can find the APK of this version attached to the tag in the
+repository[tag].
+
+You can find the changelog in this version by seeing the HISTORY[history]
+and a more detailed log looking at the tag[tag].
+
+Quick changelog:
+
+$2
+
+Please report any bugs by sending an email to the devel mailist[husky-devel].
+You may ask for features in the same mailist.
+
+Updates at F-Droid are automated and there is not a date of when this release
+will be published.
+
+Cheers!
+
+--
+
+NOTE: the signature of this APK is not the same as the Husky releases at F-Droid
+or the Play Store. Please uninstall the previous version and install this in
+order to use this release.
+
+[history]:
+https://git.sr.ht/~captainepoch/husky/tree/master/item/HISTORY
+[husky-devel]: https://lists.sr.ht/~captainepoch/husky-devel
+[tag]: https://git.sr.ht/~captainepoch/husky/refs/$1
