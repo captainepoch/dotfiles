@@ -24,6 +24,9 @@
 ;; Enable dictionaries while writing
 (add-hook 'mail-mode-hook 'flyspell-mode)
 
+;; Enable writegood-mode in mail
+(add-hook 'mail-mode-hook 'writegood-mode)
+
 ;; Mails must be wrapped at 72 chars long
 (setq-default fill-column 72)
 

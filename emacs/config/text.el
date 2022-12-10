@@ -31,7 +31,6 @@
   :ensure t
   :defer t
   :init
-  :hook (writegood-mode . mail-mode)
   :bind (
 		 ("C-c C-g g" . writegood-grade-level)
 		 ("C-c C-g e" . writegood-reading-ease)))
@@ -39,20 +38,17 @@
 ;; markdown-mode - minor mode for markdown
 (use-package markdown-mode
   :ensure t
-  :defer t
   :mode (
-		 ("\\.md" . markdown-mode)
-		 ("\\.mdown" . markdown-mode)
-		 ("\\.markdown" . markdown-mode))
-  :init
+         ("\\.md'" . markdown-mode)
+         ("\\.markdown'" . markdown-mode))
+  :config
+  (setq-default fill-column 80)
+  (setq-default auto-fill-function 'do-auto-fill)
+  (add-hook 'text-mode-hook 'turn-on-auto-fill)
   (add-hook 'markdown-mode-hook
 			(lambda ()
 			  (visual-line-mode t)
 			  (flyspell-mode t)
 			  (writegood-mode t)
 			  (flyspell-mode t)))
-  (setq-default word-wrap t)
-  :config
-  (setq-default fill-column 80)
-  (add-hook 'text-mode-hook 'turn-on-auto-fill)
-  (setq-default auto-fill-function 'do-auto-fill))
+  (setq-default word-wrap t))
