@@ -32,6 +32,9 @@
 ;; YAML config
 (add-hook 'yaml-mode-hook (load "yaml.el"))
 
+;; TOML config
+(add-hook 'toml-mode-hook (load "toml.el"))
+
 ;; Elisp config
 (add-hook 'emacs-lisp-mode (load "elisp.el"))
 
