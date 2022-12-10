@@ -6,7 +6,7 @@
   (setq flyspell-issue-welcome-flag nil
         flyspell-issue-message-flag nil
         flyspell-mark-duplications-flag nil
-	      ispell-dictionary "en")
+	    ispell-dictionary "en")
   (setq-default ispell-program-name "aspell")
   (setq-default ispell-list-command "list")
   (set-face-underline 'flyspell-incorrect
@@ -15,12 +15,12 @@
   (defun change-dictionary-spanish ()
 	(interactive)
 	(ispell-change-dictionary "es")
-  (flyspell-buffer))
+	(flyspell-buffer))
 
   (defun change-dictionary-english ()
 	(interactive)
 	(ispell-change-dictionary "en")
-  (flyspell-buffer))
+	(flyspell-buffer))
 
   :bind (:map flyspell-mode-map
 			  ("C-c d s" . change-dictionary-spanish)
@@ -33,8 +33,8 @@
   :init
   :hook (writegood-mode . mail-mode)
   :bind (
-    ("C-c C-g g" . writegood-grade-level)
-    ("C-c C-g e" . writegood-reading-ease)))
+		 ("C-c C-g g" . writegood-grade-level)
+		 ("C-c C-g e" . writegood-reading-ease)))
 
 ;; markdown-mode - minor mode for markdown
 (use-package markdown-mode
@@ -48,7 +48,7 @@
   (add-hook 'markdown-mode-hook
 			(lambda ()
 			  (visual-line-mode t)
-        (flyspell-mode t)
+			  (flyspell-mode t)
 			  (writegood-mode t)
 			  (flyspell-mode t)))
   (setq-default word-wrap t)

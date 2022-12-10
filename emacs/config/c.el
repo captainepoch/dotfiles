@@ -11,9 +11,9 @@
 (use-package ede
   :ensure t
   :init
-    (add-hook 'c-mode 'indent-guide-mode))
-  ;;:config
-  ;;(global-ede-mode))
+  (add-hook 'c-mode 'indent-guide-mode))
+;;:config
+;;(global-ede-mode))
 
 ;; Add headers and .c files to c-mode
 (add-to-list 'auto-mode-alist '("\\.c\\'" . c-mode))

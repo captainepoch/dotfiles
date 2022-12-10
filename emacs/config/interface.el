@@ -29,9 +29,8 @@
 ;; Color scheme
 (use-package tango-plus-theme
   :ensure t
-  :defer t
-  :init
-    (load-theme 'dichromacy))
+  :config
+  (load-theme 'tango-plus t))
 
 ;; Dark window border on OS X
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
@@ -135,7 +134,7 @@
         neo-window-fixed-size nil
         neo-banner-message nil)
   (add-hook 'neo-after-create-hook
-    (lambda (&rest _) (display-line-numbers-mode -1))))
+			(lambda (&rest _) (display-line-numbers-mode -1))))
 
 ;; rich-minority - less minor-modes on the modeline
 (use-package rich-minority
