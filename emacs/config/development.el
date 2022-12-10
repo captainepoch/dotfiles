@@ -141,14 +141,6 @@
   ("C-a" . mwim-beginning-of-code-or-line)
   ("C-e" . mwim-end-of-code-or-line))
 
-;; projectile - project interaction library
-(use-package projectile
-  :ensure t
-  :config
-  (projectile-global-mode 1)
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
-;;(setq projectile-switch-project-action 'neotree-projectile-action))
-
 ;; rainbow-delimiters - colored delimiters
 (use-package rainbow-delimiters
   :ensure t
