@@ -34,10 +34,10 @@
   :after go-mode)
 
 ;; go-eldoc - eldoc support for Golang
-(use-package go-eldoc
-  :ensure t
-  :diminish eldoc-mode
-  :hook (go-mode . go-eldoc-setup))
+;;(use-package go-eldoc
+;;  :ensure t
+;;  :diminish eldoc-mode
+;;  :hook (go-mode . go-eldoc-setup))
 
 (defun setup-go-mode-compile ()
   ;; Customize compile command to run go build
