@@ -27,10 +27,15 @@
 (setq mac-right-option-modifier nil)
 
 ;; Color scheme
-(use-package tango-plus-theme
+(use-package doom-themes
   :ensure t
   :config
-  (load-theme 'tango-plus t))
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t)
+  (load-theme 'doom-opera-light t)
+  (doom-themes-visual-bell-config)
+  (doom-themes-neotree-config))
 
 ;; Dark window border on OS X
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
@@ -123,6 +128,42 @@
 					;; Show line and column position
 					mode-line-position
 					))
+
+;; all-the-icons - add icons for Emacs
+(use-package all-the-icons
+  :ensure t
+  :if (display-graphic-p))
+
+;; centaur-tabs - tabs like other editors in Emacs
+(use-package centaur-tabs
+  :ensure t
+  :demand
+  :config
+  (centaur-tabs-mode t)
+  (centaur-tabs-headline-match)
+  (setq
+   centaur-tabs-set-bar 'over
+   centaur-tabs-set-icons t
+   centaur-tabs-set-modified-marker t
+   centaur-tabs-show-navigation-buttons t
+   centaur-tabs-style "bar")
+  (defun centaur-tabs-hide-tab (x)
+	"Do no to show buffer X in tabs."
+	(let ((name (format "%s" x)))
+      (or
+       ;; Current window is not dedicated window.
+       (window-dedicated-p (selected-window))
+
+       ;; Buffer name not match below blacklist.
+       (string-prefix-p "*Ibuffer" name)
+       (string-prefix-p "*Messages" name)
+
+       ;; Is not magit buffer.
+       (and (string-prefix-p "magit" name)
+			(not (file-name-extension name))))))
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward))
 
 ;; neotree - show a directory tree with autoupdate
 (use-package neotree
