@@ -171,9 +171,10 @@
   :bind (([f8] . neotree-toggle))
   :config
   (setq-default neo-smart-open t)
-  (setq neo-force-change-root t
+  (setq neo-banner-message nil
+        neo-force-change-root t
         neo-window-fixed-size nil
-        neo-banner-message nil)
+        neo-theme 'icons)
   (add-hook 'neo-after-create-hook
 			(lambda (&rest _) (display-line-numbers-mode -1))))
 
