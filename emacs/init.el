@@ -20,26 +20,26 @@
 ;; C(++) config
 (add-hook 'c-mode-hook (load "c.el"))
 
-;; Python config
-(add-hook 'python-mode-hook (load "python.el"))
+;; Elisp config
+(add-hook 'emacs-lisp-mode (load "elisp.el"))
 
 ;; Go config
 (add-hook 'go-mode-hook (load "go.el"))
+
+;; Python config
+(add-hook 'python-mode-hook (load "python.el"))
+
+;; Text hook
+(add-hook 'text-mode-hook (load "text.el"))
+
+;; TOML config
+(add-hook 'toml-mode-hook (load "toml.el"))
 
 ;; Web config
 (add-hook 'web-mode-hook (load "html.el"))
 
 ;; YAML config
 (add-hook 'yaml-mode-hook (load "yaml.el"))
-
-;; TOML config
-(add-hook 'toml-mode-hook (load "toml.el"))
-
-;; Elisp config
-(add-hook 'emacs-lisp-mode (load "elisp.el"))
-
-;; Text hook
-(add-hook 'text-mode-hook (load "text.el"))
 
 ;; Load user info
 (load "user.el")
