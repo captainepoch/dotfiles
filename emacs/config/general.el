@@ -161,6 +161,7 @@
 (use-package yasnippet
   :ensure t
   :demand t
+  :bind (("C-c y i" . yas-insert-snippet))
   :hook (
 		 (after-init . yas-global-mode)
 		 (mail-mode . yas-minor-mode))
