@@ -33,7 +33,7 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t)
-  (load-theme 'doom-opera-light t)
+  (load-theme 'doom-tomorrow-day t)
   (doom-themes-visual-bell-config)
   (doom-themes-neotree-config))
 
