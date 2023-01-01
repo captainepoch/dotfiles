@@ -26,15 +26,6 @@
 			  ("C-c d s" . change-dictionary-spanish)
 			  ("C-c d e" . change-dictionary-english)))
 
-;; writegood-mode - improve english writing
-(use-package writegood-mode
-  :ensure t
-  :defer t
-  :init
-  :bind (
-		 ("C-c C-g g" . writegood-grade-level)
-		 ("C-c C-g e" . writegood-reading-ease)))
-
 ;; markdown-mode - minor mode for markdown
 (use-package markdown-mode
   :ensure t
@@ -52,3 +43,12 @@
 			  (writegood-mode t)
 			  (flyspell-mode t)))
   (setq-default word-wrap t))
+
+;; writegood-mode - improve english writing
+(use-package writegood-mode
+  :ensure t
+  :defer t
+  :init
+  :bind (
+		 ("C-c C-g g" . writegood-grade-level)
+		 ("C-c C-g e" . writegood-reading-ease)))
