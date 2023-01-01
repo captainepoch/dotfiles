@@ -84,6 +84,9 @@
 ;; Smart tab - indent or complete
 (setq tab-always-indent 'complete)
 
+;; Now '_' is not considered a word-delimiter
+(modify-syntax-entry ?_ "w")
+
 ;; Misc. key bindings
 (global-set-key (kbd "RET") 'newline-and-indent)
 

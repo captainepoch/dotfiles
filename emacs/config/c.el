@@ -28,9 +28,6 @@
 ;; Delete hungrily
 (setq-default c-hungry-delete-key t)
 
-;; Now '_' is not considered a word-delimiter
-(modify-syntax-entry ?_ "w")
-
 ;; Set c11 as standard for flycheck
 (setq-local flycheck-gcc-language-standard "c11")
 
