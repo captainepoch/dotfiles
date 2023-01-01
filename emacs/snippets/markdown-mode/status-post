@@ -1,0 +1,34 @@
+# -_- mode: snippet -_-
+# name: StatusPost
+# key: status-post
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# --
+
++++
+title = "$1"
+categories = ["status"]
+showCategories = false
+showComments = true
+date = "$2-$3-$4"
+slug = "status-$5-$6"
++++
+
+$0
+
+<!--
+FIGURAS (IMGs)
+{{< figure src="images/IMAGE" caption="CAPTION" link="DEST"
+target="_blank" >}}
+-->
+
+<!--
+CITAS
+
+{{/*
+<cite>TEXTO[^NUM]</cite>
+
+[^NUM]: The above quote is excerpted from Rob Pike's
+[talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November
+18, 2015.
+*/}}
+-->
