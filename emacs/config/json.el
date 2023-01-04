@@ -1,5 +1,4 @@
+;; json-mode - improve json support in Emacs
 (use-package json-mode
   :ensure t
-  :defer t
-  :mode (
-		 ("\\.json" . json-mode)))
+  :mode ("\\.json\\'" . json-mode))
