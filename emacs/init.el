@@ -26,9 +26,6 @@
 ;; Go config
 (add-hook 'go-mode-hook (load "go.el"))
 
-;; Json config
-(add-hook 'json-mode-hook (load "json.el"))
-
 ;; Python config
 (add-hook 'python-mode-hook (load "python.el"))
 
