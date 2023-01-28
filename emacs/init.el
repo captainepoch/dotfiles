@@ -48,7 +48,7 @@
 (load "user.el")
 
 ;; Load Emacs server
-(load "server")
+(require 'server)
 (unless (server-running-p)
   (server-start))
 
