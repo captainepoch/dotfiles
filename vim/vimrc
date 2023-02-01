@@ -1,0 +1,121 @@
+set nocompatible
+filetype plugin indent on
+filetype plugin on
+
+" vim-plug - https://github.com/junegunn/vim-plug
+if !filereadable(expand('~/.vim/autoload/plug.vim')) | finish | endif
+call plug#begin('~/.vim/plugged')
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'godlygeek/tabular'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
+call plug#end()
+
+" Colorscheme
+set t_Co=256
+syntax on
+set completeopt-=preview
+
+set autoindent
+set backspace=indent,eol,start
+set breakindent
+set clipboard=unnamedplus
+set hidden
+set laststatus=2
+set lazyredraw
+set linebreak
+set magic
+set noexpandtab
+set nolist
+set notimeout
+set nowrap
+set number
+set ruler
+set scrolloff=3
+set shiftwidth=4
+set sidescroll=3
+set softtabstop=4
+set splitbelow
+set smarttab
+set tabstop=4
+set wrap
+
+" Ensures word-wrap does not split words
+set formatoptions=l
+set lbr
+
+" Resize windows and move tabs and such with the mouse
+set mouse=a
+
+" Put swp files elsewhere
+set backupdir=~/.cache
+set directory=~/.cache
+
+" Encoding
+set encoding=utf-8
+set fileformat=unix fileformats=unix,dos
+set fileencoding=utf-8
+set fileencodings=utf-8,ucs-bom,latin1
+
+" Width and formating
+set textwidth=80
+set wrapmargin=2
+set formatoptions+=t
+set formatoptions-=l
+set colorcolumn=-2
+set cc=80
+
+" Buffer-specific settings
+augroup filetypedetect
+  autocmd BufRead,BufNewFile *neomutt-* setfiletype mail
+autocmd Filetype gitcommit setlocal tw=72 encoding=utf-8 fileencoding=utf-8
+autocmd FileType mail setl noautoindent tw=72 wm=2 tabstop=4 shiftwidth=4 expandtab
+autocmd FileType markdown setlocal et ts=2 sw=2
+autocmd BufWritePre * :%s/\s\+$//e
+
+let mapleader = "\<space>"
+
+" PageUp and PageDown fixes
+map <silent> <PageUp> 1000<C-U>
+map <silent> <PageDown> 1000<C-D>
+imap <silent> <PageUp> <C-O>1000<C-U>
+imap <silent> <PageDown> <C-O>1000<C-D>
+
+" Remap yank & paste (clipboard)
+nnoremap <C-y> "+y
+vnoremap <C-y> "+y
+nnoremap <C-w> "+gP
+vnoremap <C-w> "+gP
+
+" Tab shortcuts
+nnoremap <C-t>t :tabnew<CR>
+nnoremap <C-t>q :qa<CR>
+nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>
+
+" Plugin - indentLine
+let g:indentLine_char = '|'
+let g:indentLine_color_term = 239
+
+" Plugin - vim-airline
+set noshowmode
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set laststatus=2
+"let g:airline_section_x = '%{PencilMode()}'"
+let g:airline_theme='wombat'
+
+" Plugin - vim-better-whitespace
+let g:better_whitespace_ctermcolor = 'red'
+let g:strip_whitespace_on_save = 1
+
+" Plugin - vim-colorschemes
+colorscheme xoria256
