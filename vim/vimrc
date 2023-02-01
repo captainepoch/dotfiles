@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'flazz/vim-colorschemes'
 Plug 'godlygeek/tabular'
 Plug 'ntpeters/vim-better-whitespace'
