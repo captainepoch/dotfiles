@@ -75,10 +75,13 @@ set cc=80
 " Buffer-specific settings
 augroup filetypedetect
   autocmd BufRead,BufNewFile *neomutt-* setfiletype mail
-autocmd Filetype gitcommit setlocal tw=72 encoding=utf-8 fileencoding=utf-8
-autocmd FileType mail setl noautoindent tw=72 wm=2 tabstop=4 shiftwidth=4 expandtab
-autocmd FileType markdown setlocal et ts=2 sw=2
-autocmd BufWritePre * :%s/\s\+$//e
+  autocmd FileType gitcommit setlocal tw=72 encoding=utf-8 fileencoding=utf-8
+  autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
+  autocmd FileType mail setl noautoindent tw=72 wm=2 tabstop=4 shiftwidth=4 expandtab
+  autocmd FileType markdown setlocal et ts=2 sw=2
+  autocmd FileType python setlocal shiftwidth=4 tabstop=4
+  autocmd BufWritePre * :%s/\s\+$//e
+augroup END
 
 let mapleader = "\<space>"
 
