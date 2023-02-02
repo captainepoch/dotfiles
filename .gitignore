@@ -5,6 +5,7 @@ emacs/*
 !emacs/init.el
 !emacs/mutt.el
 !emacs/git-commit.el
+*.elc
 
 # Yasnippet
 !snippets
