@@ -4,6 +4,12 @@ DOTFILES_BIN="$HOME/.dotfiles/bin"
 export GOPATH="$HOME/Projects/go"
 export GOPATH_BIN="$GOPATH/bin"
 
+# Fuck you Google, eat shit
+export GOPROXY=direct
+export GOSUMDB=off
+export GOTELEMETRY=off
+export GOTOOLCHAIN=local
+
 case $(uname -s) in
 "Linux")
 	export JAVA_HOME="/usr/lib/jvm/default"
