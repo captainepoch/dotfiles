@@ -4,7 +4,7 @@ DOTFILES_BIN="$HOME/.dotfiles/bin"
 export GOPATH="$HOME/Projects/go"
 export GOPATH_BIN="$GOPATH/bin"
 
-# Fuck you Google, eat shit
+# Fuck you, Google
 export GOPROXY=direct
 export GOSUMDB=off
 export GOTELEMETRY=off
@@ -25,6 +25,10 @@ case $(uname -s) in
 	export PATH="$PATH:$CORE_PERL"
 	;;
 "Darwin")
+	# Fuck you, Homebrew
+	export HOMEBREW_NO_ANALYTICS=1
+	export HOMEBREW_NO_GOOGLE_ANALYTICS=1
+
 	export JAVA_HOME=$(/usr/libexec/java_home)
 
 	LATEX_PATH="/Library/TeX/texbin"
