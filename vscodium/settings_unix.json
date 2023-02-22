@@ -122,6 +122,7 @@
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
+	"git.openRepositoryInParentFolders": "always",
 	"problems.defaultViewMode": "table",
 	"rewrap.autoWrap.enabled": true,
 	"window.restoreWindows": "none",
