@@ -7,3 +7,5 @@ export GOPROXY=direct
 export GOSUMDB=off
 export GOTELEMETRY=off
 export GOTOOLCHAIN=local
+
+export JAVA_HOME="/usr/lib/jvm/default"
