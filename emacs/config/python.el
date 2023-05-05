@@ -26,19 +26,30 @@
 				("M-," . pop-tag-mark)))
   (elpy-enable))
 
-;; jedi - Python auto-completion for Emacs
 ;; company-jedi - company backend for Python's jedi
-(use-package jedi
+(use-package company-jedi
   :after python
   :ensure t
   :init
-  (add-to-list 'company-backends 'company-jedi)
-  :config
-  (use-package company-jedi
-	:ensure t
-	:init
-	(add-hook 'python-mode-hook (lambda () (add-to-list 'company-backends 'company-jedi)))
-	(setq company-jedi-python-bin "python")))
+  (add-hook 'python-mode-hook (lambda () (add-to-list 'company-backends 'company-jedi)))
+  (setq company-jedi-python-bin "python"))
+
+;; jedi - Python auto-completion for Emacs
+(use-package jedi
+  :after company-jedi
+  :ensure t
+  :init
+  (add-to-list 'company-backends 'company-jedi))
+
+;; pipenv - pipenv support for Emacs
+(use-package pipenv
+  :after python
+  :ensure t
+  :hook (python-mode . pipenv-mode)
+  :init
+  (setq
+   pipenv-projectile-after-switch-function
+   #'pipenv-projectile-after-switch-extended))
 
 ;; virtualenvwrapper - virtualenvs within Emacs
 (use-package virtualenvwrapper
