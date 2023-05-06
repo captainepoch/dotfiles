@@ -16,6 +16,8 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'plytophogy/vim-virtualenv'
+Plug 'PieterjanMontens/vim-pipenv'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
@@ -123,3 +125,7 @@ let g:strip_whitespace_on_save = 1
 
 " Plugin - vim-colorschemes
 colorscheme xoria256
+
+" Plugin - vim-go
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
