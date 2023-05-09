@@ -11,13 +11,16 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'flazz/vim-colorschemes'
 Plug 'godlygeek/tabular'
+Plug 'jiangmiao/auto-pairs'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'PieterjanMontens/vim-pipenv'
+Plug 'plytophogy/vim-virtualenv'
+Plug 'preservim/nerdtree'
 Plug 'Raimondi/delimitMate'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'plytophogy/vim-virtualenv'
-Plug 'PieterjanMontens/vim-pipenv'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
@@ -31,6 +34,8 @@ set backspace=indent,eol,start
 set breakindent
 set clipboard=unnamedplus
 set hidden
+set hlsearch
+set incsearch
 set laststatus=2
 set lazyredraw
 set linebreak
@@ -88,6 +93,11 @@ augroup END
 
 let mapleader = "\<space>"
 
+" Mapping
+nmap <F2> :NERDTreeToggle<CR>
+nmap <C-B> :buffers<CR>
+nmap <C-J> :term<CR>
+
 " PageUp and PageDown fixes
 map <silent> <PageUp> 1000<C-U>
 map <silent> <PageDown> 1000<C-D>
@@ -109,6 +119,14 @@ nnoremap <C-k> :tabnext<CR>
 " Plugin - indentLine
 let g:indentLine_char = '|'
 let g:indentLine_color_term = 239
+
+" Plugin - NERDTree
+let NERDTreeShowBookmarks = 1
+let NERDTreeShowHidden = 1
+let NERDTreeShowLineNumbers = 0
+let NERDTreeMinimalMenu = 1
+let NERDTreeWinPos = "left"
+let NERDTreeWinSize = 31
 
 " Plugin - vim-airline
 set noshowmode
