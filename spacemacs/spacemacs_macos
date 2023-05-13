@@ -41,25 +41,18 @@ This function should only modify configuration layer settings."
                         auto-completion-enable-help-tooltip t
                       :enabled-for
                         c-c++ go)
-     ; better-defaults
-     (syntax-checking :variables
-                        syntax-checking-window-position 'right
-                        syntax-checking-window-width 80)
      (c-c++ :variables c-c++-backend 'lsp-ccls)
                        ; c-c++-dap-adapters '(dap-lldb dap-cpptools))
-     ; emacs-lisp
-     ; git
      ; (go variables go-backend 'lsp)
-     ;; helm
      (lsp :variables
             lsp-use-lsp-ui t
             lsp-ui-sideline-enable t
             lsp-enable-file-watchers nil)
      (dap)
      (markdown)
-     ; multiple-cursors
-     ; spell-checking
-     ; version-control
+     (syntax-checking :variables
+                        syntax-checking-window-position 'right
+                        syntax-checking-window-width 80)
      (treemacs)
      (yaml))
 
