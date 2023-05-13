@@ -50,6 +50,8 @@ This function should only modify configuration layer settings."
             lsp-enable-file-watchers nil)
      (dap)
      (markdown)
+     (spell-checking :variables
+                       spell-checking-enable-auto-dictionary t)
      (syntax-checking :variables
                         syntax-checking-window-position 'right
                         syntax-checking-window-width 80)
