@@ -33,27 +33,35 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-     ;; `M-m f e R' (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
-     ;; auto-completion
-     ;; better-defaults
-     emacs-lisp
-     ;; git
-     helm
-     ;; lsp
-     ;; markdown
-     multiple-cursors
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
-     treemacs)
+     (auto-completion :variables
+                        auto-completion-return-key-behavior 'complete
+                        auto-completion-tab-key-behavior 'cycle
+                        auto-completion-complete-with-key-sequence nil
+                        auto-completion-private-snippets-directory nil
+                        auto-completion-enable-help-tooltip t
+                      :enabled-for
+                        c-c++ go)
+     ; better-defaults
+     (syntax-checking :variables
+                        syntax-checking-window-position 'right
+                        syntax-checking-window-width 80)
+     (c-c++ :variables c-c++-backend 'lsp-ccls)
+                       ; c-c++-dap-adapters '(dap-lldb dap-cpptools))
+     ; emacs-lisp
+     ; git
+     ; (go variables go-backend 'lsp)
+     ;; helm
+     (lsp :variables
+            lsp-use-lsp-ui t
+            lsp-ui-sideline-enable t
+            lsp-enable-file-watchers nil)
+     (dap)
+     (markdown)
+     ; multiple-cursors
+     ; spell-checking
+     ; version-control
+     (treemacs)
+     (yaml))
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -420,7 +428,7 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'visual
 
    ;; Code folding method. Possible values are `evil', `origami' and `vimish'.
    ;; (default 'evil)
@@ -568,8 +576,61 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; Fix issue with SVG (remove for Emacs 29+)
+  (add-to-list 'image-types 'svg)
+
+  ;; Deactivate auto-save & backups
+  (setq-default auto-save-default nil)
+  (setq-default make-backup-files nil)
+  (desktop-save-mode -1)
+
+  ;; Save always as UTF-8 and Unix endline
+  (set-charset-priority 'unicode)
+  (setq locale-coding-system 'utf-8)
+  (prefer-coding-system 'utf-8-unix)
+  (set-default-coding-systems 'utf-8-unix)
+  (set-terminal-coding-system 'utf-8-unix)
+  (set-keyboard-coding-system 'utf-8-unix)
+  (set-selection-coding-system 'utf-8-unix)
+  (setq-default buffer-file-coding-system 'utf-8-unix)
+  (setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+
+  ;; Put newlines at the end of every file
+  (setq-default require-final-newline t)
+
+  ;; Delete white space at line ending
+  (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+  ;; Paste text wherever the point is
+  (setq-default mouse-yank-at-point t)
+
+  ;; Preserve OS clipboard before killing text
+  (setq save-interprogram-paste-before-kill t)
+
+  ;; Set right META key as an ALT
+  (setq mac-option-key-is-meta t)
+  (setq mac-right-option-modifier nil)
 )
 
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(company-go company counsel-gtags counsel swiper ivy dap-mode lsp-docker lsp-treemacs bui yaml lsp-mode markdown-mode flycheck-golangci-lint ggtags go-eldoc go-fill-struct go-gen-test go-guru go-impl go-rename go-tag go-mode godoctor ws-butler writeroom-mode winum which-key volatile-highlights vim-powerline vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired toc-org term-cursor symon symbol-overlay string-inflection string-edit-at-point spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline space-doc restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile all-the-icons aggressive-indent ace-link ace-jump-helm-line)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
