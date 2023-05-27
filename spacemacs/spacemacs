@@ -58,7 +58,7 @@ This function should only modify configuration layer settings."
      (syntax-checking :variables
                         syntax-checking-window-position 'right
                         syntax-checking-window-width 80)
-     (treemacs)
+     (neotree)
      (version-control :variables
                         version-control-diff-side 'left)
      (yaml))
