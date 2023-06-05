@@ -612,6 +612,15 @@ before packages are loaded."
   (transient-mark-mode t)
   (setq x-select-enable-clipboard t)
 
+  ;; Replace highlighted text when typing
+  (delete-selection-mode t)
+
+  ;; Allow clipboard from outside Emacs
+  (setq select-enable-clipboard t
+        save-interprogram-paste-before-kill t
+        apropos-do-all t
+        mouse-yank-at-point t)
+
   ;; Don't ask before visiting symlinks
   (setq vc-follow-symlinks t)
 
