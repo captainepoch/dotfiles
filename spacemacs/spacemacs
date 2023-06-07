@@ -49,6 +49,7 @@ This function should only modify configuration layer settings."
             lsp-ui-sideline-enable t
             lsp-enable-file-watchers nil)
      (dap)
+     (ibuffer)
      (markdown)
      (spacemacs-defaults)
      (spacemacs-editing)
