@@ -10,6 +10,8 @@ export GOSUMDB=off
 export GOTELEMETRY=off
 export GOTOOLCHAIN=local
 
+export ADB_MDNS=0
+
 case $(uname -s) in
 "Linux")
 	export JAVA_HOME="/usr/lib/jvm/default"
