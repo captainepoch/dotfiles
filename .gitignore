@@ -9,3 +9,6 @@ emacs/*
 
 # Yasnippet
 !snippets
+
+# Nvim
+nvim/lazy-lock.json
