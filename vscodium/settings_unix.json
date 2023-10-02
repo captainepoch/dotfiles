@@ -257,6 +257,7 @@
 	},
 	"go.formatTool": "gofmt",
 	"go.lintTool": "golint",
+	"go.useCodeSnippetsOnFunctionSuggest": true,
 	"go.useLanguageServer": true,
 	// Python
 	"python.formatting.provider": "autopep8",
