@@ -13,7 +13,6 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "plugins" },
-    { import = "plugins.neomutt" },
     { import = "plugins.theme" },
   },
   defaults = {

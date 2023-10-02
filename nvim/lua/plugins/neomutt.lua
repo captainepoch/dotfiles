@@ -1,4 +1,4 @@
 return {
-    "neomutt/neomutt.vim",
-    lazy = true,
+  --    "neomutt/neomutt.nvim",
+  --    lazy = true,
 }
