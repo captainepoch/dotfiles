@@ -129,7 +129,6 @@
 	"window.title": "${rootPath}",
 	"workbench.colorTheme": "Default Light+",
 	"workbench.editor.enablePreview": false,
-	"workbench.editor.untitled.hint": "hidden",
 	"workbench.enableExperiments": false,
 	"workbench.layoutControl.enabled": false,
 	"workbench.localHistory.enabled": false,
@@ -146,12 +145,13 @@
 	"html.validate.scripts": true,
 	"html.validate.styles": true,
 	// Go
-	"go.autocompleteUnimportedPackages": true,
-	"go.docsTool": "godoc",
+	"gopls": {
+		"ui.completion.usePlaceholders": true,
+		"ui.semanticTokens": true
+	},
 	"go.formatTool": "gofmt",
-	"go.gopath": "~/Projects/go",
 	"go.lintTool": "golint",
-	"go.useCodeSnippetsOnFunctionSuggest": true,
+	"go.useLanguageServer": true,
 	// Python
 	"python.formatting.provider": "autopep8",
 	"python.languageServer": "Jedi",
@@ -237,5 +237,6 @@
 		"editor.autoIndent": "advanced",
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
-	}
+	},
+	"workbench.editor.empty.hint": "hidden"
 }
