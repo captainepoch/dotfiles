@@ -260,18 +260,14 @@
 	"go.useCodeSnippetsOnFunctionSuggest": true,
 	"go.useLanguageServer": true,
 	// Python
-	"python.formatting.provider": "autopep8",
-	"python.languageServer": "Jedi",
-	"python.linting.enabled": true,
-	"python.linting.flake8Args": [
+	"autopep8.importStrategy": "fromEnvironment",
+  "flake8.args": [
 		"--jobs=2",
 		"--ignore=ANN201",
 		"--verbose"
 	],
-	"python.linting.flake8Enabled": true,
-	"python.linting.lintOnSave": true,
-	"python.linting.pydocstyleEnabled": true,
-	"python.linting.pylintEnabled": false,
+	"flake8.importStrategy": "fromEnvironment",
+	"python.languageServer": "Jedi",
 	"python.venvFolders": [
 		"~/Projects/PyVenv",
 		"~/.local/share/virtualenvs"
@@ -336,6 +332,7 @@
 		}
 	},
 	"[python]": {
+		"editor.defaultFormatter": "ms-python.autopep8",
 		"editor.formatOnSave": true,
 		"editor.insertSpaces": true
 	},
