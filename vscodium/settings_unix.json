@@ -257,7 +257,6 @@
 	},
 	"go.formatTool": "gofmt",
 	"go.lintTool": "golint",
-	"go.useCodeSnippetsOnFunctionSuggest": true,
 	"go.useLanguageServer": true,
 	// Python
 	"autopep8.importStrategy": "fromEnvironment",
