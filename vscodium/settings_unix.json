@@ -233,6 +233,7 @@
 	"problems.defaultViewMode": "table",
 	"rewrap.autoWrap.enabled": true,
 	"window.restoreWindows": "none",
+	"window.systemColorTheme": "dark",
 	"window.title": "${rootPath}",
 	"workbench.editor.enablePreview": false,
 	"workbench.enableExperiments": false,
@@ -260,7 +261,7 @@
 	"go.useLanguageServer": true,
 	// Python
 	"autopep8.importStrategy": "fromEnvironment",
-  "flake8.args": [
+	"flake8.args": [
 		"--jobs=2",
 		"--ignore=ANN201",
 		"--verbose"
@@ -336,6 +337,13 @@
 		"editor.insertSpaces": true
 	},
 	"sass.format.enabled": false,
+	"[scminput]": {
+		"editor.rulers": [
+			50,
+			72
+		],
+		"editor.wordWrap": "off"
+	},
 	"[yaml]": {
 		"editor.autoIndent": "advanced",
 		"editor.insertSpaces": true,
