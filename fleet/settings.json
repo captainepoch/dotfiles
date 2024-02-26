@@ -1,0 +1,75 @@
+{
+    "aiCompletion.enabled": false,
+    "theme": "grey",
+    "keymap": "macos-vscode",
+    "editor.fontFamily": "Liberation Mono",
+    "editor.softWrapEnabled": false,
+    "editor.guides": [80, 100],
+    "editor.honorCamelHumps": true,
+    "editor.tabLimit": 30,
+    "editor.previewTab": false,
+    "git.autoFetch": false,
+    "terminal.caretShape": "Block",
+    "terminal.bell": false,
+    "java.terminal.addJavaToolchain": false,
+    "nodejs.terminal.addNodeModules": false,
+    "fus.sendAllowed": false,
+    "plugins": [
+        {
+            "type": "remove",
+            "pluginName": "fleet.aiCompletion"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.go.ai"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.java.ai"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.javascript.ai"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.kotlin.ai"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.python.ai"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.rust.ai"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.ai"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.php"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.wsl"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.svelte"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.terraform"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.vim"
+        },
+        {
+            "type": "remove",
+            "pluginName": "fleet.vue"
+        }
+    ]
+}
