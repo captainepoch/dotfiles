@@ -233,7 +233,6 @@
 	"problems.defaultViewMode": "table",
 	"rewrap.autoWrap.enabled": true,
 	"window.restoreWindows": "none",
-	"window.systemColorTheme": "dark",
 	"window.title": "${rootPath}",
 	"workbench.editor.enablePreview": false,
 	"workbench.enableExperiments": false,
@@ -283,7 +282,6 @@
 	"npm.fetchOnlinePackageInfo": false,
 	"security.workspace.trust.enabled": false,
 	"security.workspace.trust.untrustedFiles": "open",
-	"terminal.integrated.enableBell": false,
 	"telemetry.telemetryLevel": "off",
 	"update.mode": "none",
 	// Formaters
@@ -331,6 +329,11 @@
 			"other": "off"
 		}
 	},
+	"[nix]": {
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.autopep8",
 		"editor.formatOnSave": true,
@@ -350,5 +353,9 @@
 		"editor.tabSize": 2
 	},
 	"workbench.editor.empty.hint": "hidden",
-	"workbench.colorTheme": "Default Light+"
+	"workbench.colorTheme": "Default Light+",
+	"accessibility.signals.terminalBell": {
+		"sound": "off"
+	},
+	"terminal.integrated.enableVisualBell": false
 }
