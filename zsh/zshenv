@@ -14,17 +14,16 @@ export ADB_MDNS=0
 
 case $(uname -s) in
 "Linux")
-	export JAVA_HOME="/usr/lib/jvm/default"
+	#export JAVA_HOME=$(echo $JAVA_HOME)
 
 	export ANDROID_HOME="$HOME/Android/Sdk"
 	ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/33.0.2"
+	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/34.0.0"
 
-	CORE_PERL="/usr/bin/core_perl"
+	#CORE_PERL="/usr/bin/core_perl"
+	#LOCAL_BIN="$HOME/.local/bin"
 
-	LOCAL_BIN="$HOME/.local/bin"
-
-	export PATH="$PATH:$CORE_PERL"
+	#export PATH="$PATH:$CORE_PERL"
 	;;
 "Darwin")
 	# Fuck you, Homebrew
