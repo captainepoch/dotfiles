@@ -1,4 +1,7 @@
 {
+	"accessibility.signals.terminalBell": {
+		"sound": "off"
+	},
 	// DiffEditor
 	"diffEditor.codeLens": false,
 	"diffEditor.renderSideBySide": true,
@@ -232,16 +235,19 @@
 	"git.openRepositoryInParentFolders": "always",
 	"problems.defaultViewMode": "table",
 	"rewrap.autoWrap.enabled": true,
+	"terminal.integrated.enableVisualBell": false,
 	"window.restoreWindows": "none",
 	"window.title": "${rootPath}",
+	"workbench.colorTheme": "Default Light+",
+	"workbench.editor.empty.hint": "hidden",
 	"workbench.editor.enablePreview": false,
 	"workbench.enableExperiments": false,
 	"workbench.layoutControl.enabled": false,
 	"workbench.localHistory.enabled": false,
 	"workbench.preferredDarkColorTheme": "Default Dark+",
 	"workbench.preferredLightColorTheme": "Default Light+",
-	"workbench.startupEditor": "none",
 	"workbench.settings.enableNaturalLanguageSearch": false,
+	"workbench.startupEditor": "none",
 	// HTML
 	"html.autoClosingTags": true,
 	"html.completion.attributeDefaultValue": "doublequotes",
@@ -274,7 +280,7 @@
 	"python.venvPath": "${workspaceFolderBasename}",
 	// C(++)
 	"astyle.astylerc": "${workspaceFolderBasename}/codestyle/astylerc",
-	"C_Cpp.formatting": "Disabled",
+	"C_Cpp.formatting": "vcFormat",
 	// Other
 	"breadcrumbs.enabled": false,
 	"explorer.confirmDelete": false,
@@ -351,11 +357,5 @@
 		"editor.autoIndent": "advanced",
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
-	},
-	"workbench.editor.empty.hint": "hidden",
-	"workbench.colorTheme": "Default Light+",
-	"accessibility.signals.terminalBell": {
-		"sound": "off"
-	},
-	"terminal.integrated.enableVisualBell": false
+	}
 }
