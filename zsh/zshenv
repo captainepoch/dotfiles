@@ -17,8 +17,8 @@ case $(uname -s) in
 	#export JAVA_HOME=$(echo $JAVA_HOME)
 
 	export ANDROID_HOME="$HOME/Android/Sdk"
-	ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/34.0.0"
+	#ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
+	#ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/34.0.0"
 
 	#CORE_PERL="/usr/bin/core_perl"
 	#LOCAL_BIN="$HOME/.local/bin"
