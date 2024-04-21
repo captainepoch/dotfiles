@@ -17,6 +17,7 @@ Nvim config is based on [LazyVim Starter][lazyvim].
 # LICENSE
 
 [lazyvim]: https://github.com/LazyVim/starter
-[nixos]: https://codeberg.org/captainepoch/nixos
+[nixos]: https://github.com/captainepoch/nixos
 [vim-plug]: https://github.com/junegunn/vim-plug
+
 [MIT](./COPYING).
