@@ -4,6 +4,7 @@
 	},
 	// DiffEditor
 	"diffEditor.codeLens": false,
+	"diffEditor.hideUnchangedRegions.enabled": true,
 	"diffEditor.renderSideBySide": true,
 	"diffEditor.ignoreTrimWhitespace": true,
 	"diffEditor.maxComputationTime": 0,
@@ -279,8 +280,9 @@
 	],
 	"python.venvPath": "${workspaceFolderBasename}",
 	// C(++)
-	"astyle.astylerc": "${workspaceFolderBasename}/codestyle/astylerc",
-	"C_Cpp.formatting": "vcFormat",
+	"astyle.c.enable": true,
+	"astyle.cpp.enable": true,
+	"astyle.astylerc": "${workspaceFolderBasename}/.vscode/astylerc",
 	// Other
 	"breadcrumbs.enabled": false,
 	"explorer.confirmDelete": false,
@@ -291,6 +293,9 @@
 	"telemetry.telemetryLevel": "off",
 	"update.mode": "none",
 	// Formaters
+	"[c]": {
+		"editor.defaultFormatter": "chiehyu.vscode-astyle"
+	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.suggest.insertMode": "replace",
