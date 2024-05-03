@@ -34,14 +34,14 @@ case $(uname -s) in
 
 	LATEX_PATH="/Library/TeX/texbin"
 	SBIN_PATH="/usr/local/sbin"
+	BIN_PATH="/usr/local/bin"
 	VSCODIUM_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
 
 	export ANDROID_HOME="$HOME/Library/Android/sdk"
 	ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/33.0.0"
 
-	EMACS="/Applications/Emacs.app/Contents/MacOS"
-	EMACSCLIENT="/Applications/Emacs.app/Contents/MacOS/bin"
+	DOOM_EMACS="$HOME/.emacs.d/bin"
 
 	PYTHON_BIN="$HOME/Library/Python/3.10/bin"
 
@@ -50,7 +50,7 @@ case $(uname -s) in
 	# Mutt charset
 	export LC_ALL=es_ES.UTF-8
 
-	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$EMACS:$EMACSCLIENT:$PYTHON_BIN"
+	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$BIN_PATH:$DOOM_EMACS:$PYTHON_BIN"
 	;;
 esac
 
