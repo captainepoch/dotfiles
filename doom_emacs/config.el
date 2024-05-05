@@ -31,13 +31,15 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+;(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-tomorrow-day)
 
 (setq frame-title-format '("%b - Emacs")
       icon-title-format frame-title-format)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
+(global-display-line-numbers-mode)
 (setq display-line-numbers-type t)
 
 ;; If you use `org' and don't want your org files in the default location below,
@@ -75,3 +77,82 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; SECTION: files
+
+;;; Set tabs insead of spaces
+(setq-default
+ indent-tabs-mode t
+ tab-width 4
+ standard-indent tab-width)
+
+;;; Save always as UTF-8 and Unix endline
+(set-charset-priority 'unicode)
+(setq locale-coding-system 'utf-8)
+(prefer-coding-system 'utf-8-unix)
+(set-default-coding-systems 'utf-8-unix)
+(set-terminal-coding-system 'utf-8-unix)
+(set-keyboard-coding-system 'utf-8-unix)
+(set-selection-coding-system 'utf-8-unix)
+(setq-default buffer-file-coding-system 'utf-8-unix)
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+
+;;; Put newlines at the end of every file
+(setq-default require-final-newline t)
+
+;;; Delete white space at line ending
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;;; Paste text wherever the point is
+(setq-default mouse-yank-at-point t)
+
+;;; Replace highlighted text when typing
+(delete-selection-mode t)
+
+;;; Befriend with the system's clipboard
+(transient-mark-mode t)
+(setq x-select-enable-clipboard t)
+
+;;; Preserve OS clipboard before killing text
+(setq save-interprogram-paste-before-kill t)
+
+;;; Smart tab - indent or complete
+(setq tab-always-indent 'complete)
+
+;;; Now '_' is not considered a word-delimiter
+(modify-syntax-entry ?_ "w")
+
+;;; Misc. key bindings
+(global-set-key (kbd "RET") 'newline-and-indent)
+
+;;; Allow clipboard from outside Emacs
+(setq select-enable-clipboard t
+      save-interprogram-paste-before-kill t
+      apropos-do-all t
+      mouse-yank-at-point t)
+
+;;; Now '_' is not considered a word-delimiter
+(modify-syntax-entry ?_ "w")
+
+;; SECTION: macOS stuff
+
+;;; Set right META key as an ALT
+(setq mac-option-key-is-meta t)
+(setq mac-right-option-modifier nil)
+
+;;; Dark window border on OS X
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+
+;; SECTION: package configs
+
+;;; eldoc - shows the argument list of the function call
+(use-package! eldoc
+  :hook (prog-mode . eldoc-mode))
+
+(use-package! syntax-subword
+  :ensure t
+  :init
+  (setq syntax-subword-skip-spaces t)
+  :config
+  (global-syntax-subword-mode))
