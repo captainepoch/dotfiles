@@ -150,6 +150,24 @@
 (use-package! eldoc
   :hook (prog-mode . eldoc-mode))
 
+;;; Markdown defaults
+(use-package! markdown-mode
+  :defer t
+  :mode (
+         ("\\.md'" . markdown-mode)
+         ("\\.markdown'" . markdown-mode))
+  :config
+  (setq-default fill-column 80)
+  (setq-default auto-fill-function 'do-auto-fill)
+  (add-hook 'text-mode-hook 'turn-on-auto-fill)
+  (add-hook 'markdown-mode-hook
+			(lambda ()
+			  (visual-line-mode t)
+			  (writegood-mode t)
+			  (flyspell-mode t)))
+  (setq-default word-wrap t))
+
+;;; Kill like VSCodium
 (use-package! syntax-subword
   :ensure t
   :init
