@@ -162,9 +162,7 @@
   (add-hook 'text-mode-hook 'turn-on-auto-fill)
   (add-hook 'markdown-mode-hook
 			(lambda ()
-			  (visual-line-mode t)
-			  (writegood-mode t)
-			  (flyspell-mode t)))
+			  (visual-line-mode t)))
   (setq-default word-wrap t))
 
 ;;; Kill like VSCodium
