@@ -134,6 +134,10 @@
 ;;; Now '_' is not considered a word-delimiter
 (modify-syntax-entry ?_ "w")
 
+;;; Move to beginning/end of a function
+(global-set-key (kbd "M-<up>") 'beginning-of-defun)
+(global-set-key (kbd "M-<down>") 'end-of-defun)
+
 ;; SECTION: macOS stuff
 
 ;;; Set right META key as an ALT
