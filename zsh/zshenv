@@ -12,6 +12,8 @@ export GOTOOLCHAIN=local
 
 export ADB_MDNS=0
 
+DOOM_EMACS="$HOME/.emacs.d/bin"
+
 case $(uname -s) in
 "Linux")
 	#export JAVA_HOME=$(echo $JAVA_HOME)
@@ -41,8 +43,6 @@ case $(uname -s) in
 	ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/33.0.0"
 
-	DOOM_EMACS="$HOME/.emacs.d/bin"
-
 	PYTHON_BIN="$HOME/Library/Python/3.10/bin"
 
 	LOCAL_BIN="$HOME/.local/bin"
@@ -50,10 +50,10 @@ case $(uname -s) in
 	# Mutt charset
 	export LC_ALL=es_ES.UTF-8
 
-	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$BIN_PATH:$DOOM_EMACS:$PYTHON_BIN:$LOCAL_BIN:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS"
+	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$BIN_PATH:$PYTHON_BIN:$LOCAL_BIN:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS"
 	;;
 esac
 
-export PATH="$PATH:$GOPATH:$GOPATH_BIN"
+export PATH="$PATH:$GOPATH:$GOPATH_BIN:$DOOM_EMACS"
 
 fpath+=~/.zfunc
