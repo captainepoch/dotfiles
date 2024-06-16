@@ -49,5 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
+(package! caddyfile-mode)
 (package! eldoc)
 (package! syntax-subword)
