@@ -31,7 +31,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;(setq doom-theme 'doom-one)
+					;(setq doom-theme 'doom-one)
 (setq doom-theme 'doom-tomorrow-day)
 
 (setq frame-title-format '("%b - Emacs")
@@ -150,6 +150,11 @@
 
 ;; SECTION: package configs
 
+;;; caddyfile-mode - config for Caddyfiles
+(use-package! caddyfile-mode
+  :mode (("Caddyfile\\'" . caddyfile-mode)
+	 ("caddy\\.conf\\'" . caddyfile-mode)))
+
 ;;; eldoc - shows the argument list of the function call
 (use-package! eldoc
   :hook (prog-mode . eldoc-mode))
@@ -158,15 +163,15 @@
 (use-package! markdown-mode
   :defer t
   :mode (
-         ("\\.md'" . markdown-mode)
-         ("\\.markdown'" . markdown-mode))
+	 ("\\.md'" . markdown-mode)
+	 ("\\.markdown'" . markdown-mode))
   :config
   (setq-default fill-column 80)
   (setq-default auto-fill-function 'do-auto-fill)
   (add-hook 'text-mode-hook 'turn-on-auto-fill)
   (add-hook 'markdown-mode-hook
-			(lambda ()
-			  (visual-line-mode t)))
+	    (lambda ()
+	      (visual-line-mode t)))
   (setq-default word-wrap t))
 
 ;;; Kill like VSCodium
