@@ -153,7 +153,8 @@
 ;;; caddyfile-mode - config for Caddyfiles
 (use-package! caddyfile-mode
   :mode (("Caddyfile\\'" . caddyfile-mode)
-	 ("caddy\\.conf\\'" . caddyfile-mode)))
+	 ("\\.caddy\\'" . caddyfile-mode)
+	 ("\\.caddyfile\\'" . caddyfile-mode)))
 
 ;;; eldoc - shows the argument list of the function call
 (use-package! eldoc
