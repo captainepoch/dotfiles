@@ -280,9 +280,12 @@
 	],
 	"python.venvPath": "${workspaceFolderBasename}",
 	// C(++)
-	"astyle.c.enable": true,
-	"astyle.cpp.enable": true,
+	"astyle.c.enable": false,
+	"astyle.cpp.enable": false,
 	"astyle.astylerc": "${workspaceFolderBasename}/.vscode/astylerc",
+	"C_Cpp.clang_format_fallbackStyle": "LLVM",
+	"C_Cpp.clang_format_sortIncludes": true,
+	"C_Cpp.clang_format_style": "LLVM",
 	// Other
 	"breadcrumbs.enabled": false,
 	"explorer.confirmDelete": false,
@@ -294,7 +297,7 @@
 	"update.mode": "none",
 	// Formaters
 	"[c]": {
-		"editor.defaultFormatter": "chiehyu.vscode-astyle"
+		"editor.defaultFormatter": "ms-vscode.cpptools"
 	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
