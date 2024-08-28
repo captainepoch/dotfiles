@@ -283,9 +283,6 @@
 	"astyle.c.enable": false,
 	"astyle.cpp.enable": false,
 	"astyle.astylerc": "${workspaceFolderBasename}/.vscode/astylerc",
-	"C_Cpp.clang_format_fallbackStyle": "LLVM",
-	"C_Cpp.clang_format_sortIncludes": true,
-	"C_Cpp.clang_format_style": "LLVM",
 	// Other
 	"breadcrumbs.enabled": false,
 	"explorer.confirmDelete": false,
