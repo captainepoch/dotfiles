@@ -21,11 +21,6 @@ case $(uname -s) in
 	export ANDROID_HOME="$HOME/Android/Sdk"
 	#ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 	#ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/34.0.0"
-
-	#CORE_PERL="/usr/bin/core_perl"
-	#LOCAL_BIN="$HOME/.local/bin"
-
-	#export PATH="$PATH:$CORE_PERL"
 	;;
 "Darwin")
 	# Fuck you, Homebrew
@@ -36,24 +31,20 @@ case $(uname -s) in
 
 	LATEX_PATH="/Library/TeX/texbin"
 	SBIN_PATH="/usr/local/sbin"
-	BIN_PATH="/usr/local/bin"
-	VSCODIUM_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
+
+	#VSCODIUM_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
 
 	export ANDROID_HOME="$HOME/Library/Android/sdk"
 	ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/33.0.0"
-
-	PYTHON_BIN="$HOME/Library/Python/3.10/bin"
-
-	LOCAL_BIN="$HOME/.local/bin"
+	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/35.0.0"
 
 	# Mutt charset
 	export LC_ALL=es_ES.UTF-8
 
-	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$VSCODIUM_PATH:$BIN_PATH:$PYTHON_BIN:$LOCAL_BIN:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS"
+	DOOM_EMACS="$HOME/.config/emacs/bin/"
+
+	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS"
 	;;
 esac
 
 export PATH="$PATH:$GOPATH:$GOPATH_BIN:$DOOM_EMACS"
-
-fpath+=~/.zfunc
