@@ -148,6 +148,14 @@
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
+;;; Set default size only in Linux
+(when (eq system-type 'gnu/linux)
+  (setq initial-frame-alist
+        '((width . 160)
+          (height . 65)
+          (left . 600)
+          (top . 200))))
+
 ;; SECTION: package configs
 
 ;;; eldoc - shows the argument list of the function call
