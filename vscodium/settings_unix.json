@@ -234,6 +234,7 @@
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
+	"git.confirmSync": false,
 	"git.openRepositoryInParentFolders": "always",
 	"problems.defaultViewMode": "table",
 	"rewrap.autoWrap.enabled": true,
@@ -321,6 +322,7 @@
 		"editor.tabSize": 2
 	},
 	"[jinja-html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
