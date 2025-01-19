@@ -2,6 +2,7 @@
 	"accessibility.signals.terminalBell": {
 		"sound": "off"
 	},
+	"chat.commandCenter.enabled": false,
 	// DiffEditor
 	"diffEditor.codeLens": false,
 	"diffEditor.hideUnchangedRegions.enabled": true,
@@ -285,6 +286,7 @@
 	"astyle.astylerc": "${workspaceFolderBasename}/.vscode/astylerc",
 	// Other
 	"breadcrumbs.enabled": false,
+	"editor.experimental.treeSitterTelemetry": false,
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
 	"npm.fetchOnlinePackageInfo": false,
@@ -294,7 +296,7 @@
 	"update.mode": "none",
 	// Formaters
 	"[c]": {
-		"editor.defaultFormatter": "ms-vscode.cpptools"
+		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
 	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
