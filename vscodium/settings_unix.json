@@ -362,6 +362,12 @@
 		],
 		"editor.wordWrap": "off"
 	},
+	"[scss]": {
+		"editor.defaultFormatter": "vscode.css-language-features",
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
 	"[yaml]": {
 		"editor.autoIndent": "advanced",
 		"editor.insertSpaces": true,
