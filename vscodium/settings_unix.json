@@ -228,6 +228,7 @@
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.wordWrapColumn": 80,
 	"extensions.autoUpdate": false,
+	"extensions.autoCheckUpdates": false,
 	"extensions.ignoreRecommendations": true,
 	"files.encoding": "utf8",
 	"files.eol": "\n",
