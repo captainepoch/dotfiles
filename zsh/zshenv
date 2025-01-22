@@ -32,7 +32,7 @@ case $(uname -s) in
 	LATEX_PATH="/Library/TeX/texbin"
 	SBIN_PATH="/usr/local/sbin"
 
-	#VSCODIUM_PATH="/Applications/VSCodium.app/Contents/Resources/app/bin"
+	VSCODIUM_PATH="$HOME/Applications/VSCodium.app/Contents/Resources/app/bin"
 
 	export ANDROID_HOME="$HOME/Library/Android/sdk"
 	ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
@@ -43,7 +43,7 @@ case $(uname -s) in
 
 	DOOM_EMACS="$HOME/.config/emacs/bin/"
 
-	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS"
+	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS:$VSCODIUM_PATH"
 	;;
 esac
 
