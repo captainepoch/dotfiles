@@ -24,6 +24,7 @@
 	"editor.formatOnSave": false,
 	"editor.lineNumbers": "on",
 	"editor.matchBrackets": "always",
+	"editor.renderWhitespace": "selection",
 	"editor.rulers": [
 		80,
 		100
