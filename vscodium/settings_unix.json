@@ -24,7 +24,7 @@
 	"editor.formatOnSave": false,
 	"editor.lineNumbers": "on",
 	"editor.matchBrackets": "always",
-	"editor.renderWhitespace": "selection",
+	"editor.renderWhitespace": "all",
 	"editor.rulers": [
 		80,
 		100
@@ -195,7 +195,7 @@
 		},
 		"textMateRules": [
 			{
-				"scope": "keyword",
+				"scope": "keyword.control",
 				"settings": {
 					"fontStyle": "bold"
 				}
@@ -214,12 +214,6 @@
 			},
 			{
 				"scope": "support.class.builtin",
-				"settings": {
-					"fontStyle": "bold"
-				}
-			},
-			{
-				"scope": "meta.function",
 				"settings": {
 					"fontStyle": "bold"
 				}
@@ -299,7 +293,14 @@
 	"update.mode": "none",
 	// Formaters
 	"[c]": {
-		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4
+	},
+	"[cpp]": {
+		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4
 	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
