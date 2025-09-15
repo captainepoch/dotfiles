@@ -2,7 +2,19 @@
 	"accessibility.signals.terminalBell": {
 		"sound": "off"
 	},
+	// Disable AI
+	"chat.agent.enabled": false,
 	"chat.commandCenter.enabled": false,
+	"chat.disableAIFeatures": true,
+	"chat.detectParticipant.enabled": false,
+	"chat.instructionsFilesLocations": {},
+	"chat.modeFilesLocations": {},
+	"chat.promptFilesLocations": {},
+	"chat.tools.edits.autoApprove": {},
+	"chat.tools.terminal.autoApprove": {},
+	"chat.tools.terminal.enableAutoApprove": false,
+	"chat.useAgentsMdFile": false,
+	"inlineChat.lineNaturalLanguageHint": false,
 	// DiffEditor
 	"diffEditor.codeLens": false,
 	"diffEditor.hideUnchangedRegions.enabled": true,
