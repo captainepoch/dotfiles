@@ -138,6 +138,10 @@
 (global-set-key (kbd "M-<up>") 'beginning-of-defun)
 (global-set-key (kbd "M-<down>") 'end-of-defun)
 
+;;; Disable undo-tree diff visualizer
+(setq undo-tree-visualizer-diff nil)
+(setq undo-tree-visualizer-show-all nil)
+
 ;; SECTION: macOS stuff
 
 ;;; Set right META key as an ALT
