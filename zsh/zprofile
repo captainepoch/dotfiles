@@ -1,5 +1,0 @@
-case $(uname -s) in
-"Darwin")
-	export PATH="$PATH:/usr/local/bin"
-	;;
-esac

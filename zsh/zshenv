@@ -1,5 +1,3 @@
-DOTFILES_BIN="$HOME/.dotfiles/bin"
-
 # Go environment
 export GOPATH="$HOME/Projects/go"
 export GOPATH_BIN="$GOPATH/bin"
