@@ -14,11 +14,13 @@ DOOM_EMACS="$HOME/.emacs.d/bin"
 
 case $(uname -s) in
 "Linux")
-	#export JAVA_HOME=$(echo $JAVA_HOME)
+	export JAVA_HOME="/usr/lib/jvm/default"
 
 	export ANDROID_HOME="$HOME/Android/Sdk"
 	#ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 	#ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/34.0.0"
+
+  export NVM_DIR="$HOME/.config/nvm"
 	;;
 "Darwin")
 	export JAVA_HOME=$(/usr/libexec/java_home)
@@ -37,11 +39,11 @@ case $(uname -s) in
 
 	DOOM_EMACS="$HOME/.config/emacs/bin/"
 
+  export NVM_DIR="$HOME/.nvm"
 	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS:$VSCODIUM_PATH"
 	;;
 esac
 
-export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
