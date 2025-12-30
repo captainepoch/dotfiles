@@ -16,8 +16,11 @@ o.cc = { 80 }
 o.clipboard = "unnamedplus"
 -- improve diff visualization
 o.diffopt = "internal,filler,closeoff,linematch:60"
+o.eol = true
 -- use spaces instead of tabs
 o.expandtab = true
+-- ensure new line at the end
+o.fixeol = true
 o.lbr = true
 o.linebreak = true
 -- define invisible chars
