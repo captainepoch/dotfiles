@@ -8,13 +8,15 @@
 	"chat.disableAIFeatures": true,
 	"chat.detectParticipant.enabled": false,
 	"chat.instructionsFilesLocations": {},
-	"chat.modeFilesLocations": {},
 	"chat.promptFilesLocations": {},
 	"chat.tools.edits.autoApprove": {},
 	"chat.tools.terminal.autoApprove": {},
 	"chat.tools.terminal.enableAutoApprove": false,
 	"chat.useAgentsMdFile": false,
-	"inlineChat.lineNaturalLanguageHint": false,
+	"chat.viewSessions.enabled": false,
+	"editor.inlineSuggest.enabled": false,
+	"inlineChat.accessibleDiffView": "off",
+	"terminal.integrated.initialHint": false,
 	// DiffEditor
 	"diffEditor.codeLens": false,
 	"diffEditor.hideUnchangedRegions.enabled": true,
@@ -244,6 +246,7 @@
 	"files.trimTrailingWhitespace": true,
 	"git.confirmSync": false,
 	"git.openRepositoryInParentFolders": "always",
+	// Copilot
 	"problems.defaultViewMode": "table",
 	"rewrap.autoWrap.enabled": true,
 	"terminal.integrated.enableVisualBell": false,
@@ -289,16 +292,11 @@
 		"~/.local/share/virtualenvs"
 	],
 	"python.venvPath": "${workspaceFolderBasename}",
-	// C(++)
-	"astyle.c.enable": false,
-	"astyle.cpp.enable": false,
-	"astyle.astylerc": "${workspaceFolderBasename}/.vscode/astylerc",
 	// Other
 	"breadcrumbs.enabled": false,
 	"editor.experimental.treeSitterTelemetry": false,
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
-	"direnv.restart.automatic": true,
 	"npm.fetchOnlinePackageInfo": false,
 	"security.workspace.trust.enabled": false,
 	"security.workspace.trust.untrustedFiles": "open",
