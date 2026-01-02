@@ -19,8 +19,6 @@ case $(uname -s) in
 	export ANDROID_HOME="$HOME/Android/Sdk"
 	#ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 	#ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/34.0.0"
-
-  export NVM_DIR="$HOME/.config/nvm"
 	;;
 "Darwin")
 	export JAVA_HOME=$(/usr/libexec/java_home)
@@ -32,19 +30,19 @@ case $(uname -s) in
 
 	export ANDROID_HOME="$HOME/Library/Android/sdk"
 	ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/35.0.0"
+	ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/36.0.2"
 
 	# Mutt charset
 	export LC_ALL=es_ES.UTF-8
 
 	DOOM_EMACS="$HOME/.config/emacs/bin/"
 
-  export NVM_DIR="$HOME/.nvm"
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 	export PATH="$PATH:$SBIN_PATH:$LATEX_PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_BUILD_TOOLS:$VSCODIUM_PATH"
 	;;
 esac
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$PATH:$GOPATH:$GOPATH_BIN:$DOOM_EMACS"
