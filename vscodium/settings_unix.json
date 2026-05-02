@@ -4,7 +4,6 @@
 	},
 	// Disable AI
 	"chat.agent.enabled": false,
-	"chat.commandCenter.enabled": false,
 	"chat.disableAIFeatures": true,
 	"chat.detectParticipant.enabled": false,
 	"chat.instructionsFilesLocations": {},
@@ -15,7 +14,6 @@
 	"chat.useAgentsMdFile": false,
 	"chat.viewSessions.enabled": false,
 	"editor.inlineSuggest.enabled": false,
-	"inlineChat.accessibleDiffView": "off",
 	"terminal.integrated.initialHint": false,
 	// DiffEditor
 	"diffEditor.codeLens": false,
@@ -48,7 +46,7 @@
 	"editor.tabSize": 4,
 	"editor.trimAutoWhitespace": true,
 	"editor.tokenColorCustomizations": {
-		"[Default Light+]": {
+		"[Light+]": {
 			"textMateRules": [
 				{
 					"scope": [
@@ -187,7 +185,7 @@
 						"keyword.control.anchor.regexp"
 					],
 					"settings": {
-						"foreground": "#a31515"
+						"foreground": "#A31515"
 					}
 				},
 				{
@@ -208,6 +206,17 @@
 			]
 		},
 		"textMateRules": [
+			{
+    "scope": [
+        "variable.other.constant",
+        "variable.other.enummember",
+        "support.constant.json",
+        "constant.other.json"
+    ],
+    "settings": {
+        "foreground": "#a31515"
+    }
+},
 			{
 				"scope": "keyword.control",
 				"settings": {
@@ -232,7 +241,7 @@
 					"fontStyle": "bold"
 				}
 			}
-		]
+		],
 	},
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.wordWrapColumn": 80,
@@ -252,14 +261,14 @@
 	"terminal.integrated.enableVisualBell": false,
 	"window.restoreWindows": "none",
 	"window.title": "${rootPath}",
-	"workbench.colorTheme": "Default Light+",
+	"workbench.colorTheme": "Light+",
 	"workbench.editor.empty.hint": "hidden",
 	"workbench.editor.enablePreview": false,
 	"workbench.enableExperiments": false,
 	"workbench.layoutControl.enabled": false,
 	"workbench.localHistory.enabled": false,
-	"workbench.preferredDarkColorTheme": "Default Dark+",
-	"workbench.preferredLightColorTheme": "Default Light+",
+	"workbench.preferredDarkColorTheme": "Dark+",
+	"workbench.preferredLightColorTheme": "Light+",
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.startupEditor": "none",
 	// HTML
@@ -315,7 +324,7 @@
 		"editor.tabSize": 4
 	},
 	"[css]": {
-		"editor.defaultFormatter": "prettier.prettier-vscode",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.suggest.insertMode": "replace",
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
@@ -337,7 +346,7 @@
 		"editor.tabSize": 2
 	},
 	"[jinja-html]": {
-		"editor.defaultFormatter": "prettier.prettier-vscode",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
